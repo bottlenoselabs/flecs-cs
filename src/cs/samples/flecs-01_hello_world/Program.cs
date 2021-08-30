@@ -32,10 +32,8 @@ internal static unsafe class Program
         /* Get the Position component */
         var p = ecs_get_id<Components.Position>(world, entity, component);
 
-        var nameCString = ecs_get_name(world, entity);
-        var nameString = Runtime.String8U(nameCString);
-
-        Console.WriteLine($"Position of {nameString} is {p.X}, {p.Y}");
+        var name = ecs_get_name(world, entity);
+        Console.WriteLine($"Position of {name} is {p.X}, {p.Y}");
 
         /* Cleanup */
         return ecs_fini(world);

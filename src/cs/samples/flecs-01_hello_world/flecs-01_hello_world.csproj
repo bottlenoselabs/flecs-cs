@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="../../production\flecs-cs\flecs-cs.csproj" />
+      <ProjectReference Include="../../production/flecs-cs/flecs-cs.csproj" />
     </ItemGroup>
 
 </Project>
