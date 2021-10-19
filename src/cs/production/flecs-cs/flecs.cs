@@ -1390,23 +1390,27 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern ecs_size_t ecs_stresc(CString8U @out, ecs_size_t size, byte delimiter, CString8U @in);
 
-    // Function @ expr.h:119:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:104:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    [DllImport(LibraryName)]
+    public static extern CString8U ecs_astresc(byte delimiter, CString8U @in);
+
+    // Function @ expr.h:132:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_parse_expr(ecs_world_t* world, CString8U ptr, ecs_entity_t type, void* data_out, ecs_expr_desc_t* desc);
 
-    // Function @ expr.h:136:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:149:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_ptr_to_expr(ecs_world_t* world, ecs_entity_t type, void* data);
 
-    // Function @ expr.h:151:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:164:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern int ecs_ptr_to_expr_buf(ecs_world_t* world, ecs_entity_t type, void* data, ecs_strbuf_t* buf_out);
 
-    // Function @ expr.h:169:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:182:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern int ecs_primitive_to_expr_buf(ecs_world_t* world, ecs_primitive_kind_t kind, void* data, ecs_strbuf_t* str);
 
-    // Function @ expr.h:186:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:199:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_parse_expr_token(CString8U name, CString8U expr, CString8U ptr, CString8U token);
 
@@ -1758,42 +1762,42 @@ public static unsafe partial class flecs
         public delegate* unmanaged<CString8U, CString8U> Pointer;
     }
 
-    // FunctionPointer @ api_types.h:347:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // FunctionPointer @ api_types.h:346:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_xtor_t
     {
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, void*, ulong, int, void*, void> Pointer;
     }
 
-    // FunctionPointer @ api_types.h:357:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // FunctionPointer @ api_types.h:356:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_copy_t
     {
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
     }
 
-    // FunctionPointer @ api_types.h:369:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // FunctionPointer @ api_types.h:368:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_move_t
     {
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
     }
 
-    // FunctionPointer @ api_types.h:381:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // FunctionPointer @ api_types.h:380:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_copy_ctor_t
     {
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, EcsComponentLifecycle*, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
     }
 
-    // FunctionPointer @ api_types.h:394:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // FunctionPointer @ api_types.h:393:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_move_ctor_t
     {
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, EcsComponentLifecycle*, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
     }
 
-    // FunctionPointer @ api_types.h:407:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // FunctionPointer @ api_types.h:406:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_on_set_t
     {
@@ -2044,7 +2048,7 @@ public static unsafe partial class flecs
         public uint nanosec;
     }
 
-    // Struct @ api_types.h:344:38 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+    // Struct @ api_types.h:343:38 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
     [StructLayout(LayoutKind.Explicit, Size = 80, Pack = 8)]
     public struct EcsComponentLifecycle
     {
@@ -2369,21 +2373,18 @@ public static unsafe partial class flecs
         public float delta_system_time;
 
         [FieldOffset(208)] // size = 4, padding = 0
-        public float world_time;
-
-        [FieldOffset(212)] // size = 4, padding = 0
         public int frame_offset;
 
-        [FieldOffset(216)] // size = 4, padding = 0
+        [FieldOffset(212)] // size = 4, padding = 0
         public int offset;
 
-        [FieldOffset(220)] // size = 4, padding = 0
+        [FieldOffset(216)] // size = 4, padding = 0
         public int count;
 
-        [FieldOffset(224)] // size = 4, padding = 0
+        [FieldOffset(220)] // size = 4, padding = 0
         public int total_count;
 
-        [FieldOffset(228)] // size = 1, padding = 3
+        [FieldOffset(224)] // size = 1, padding = 7
         public CBool is_valid;
 
         [FieldOffset(232)] // size = 8, padding = 0
@@ -2404,7 +2405,7 @@ public static unsafe partial class flecs
         [FieldOffset(2144)] // size = 296, padding = 0
         public ecs_iter_cache_t cache;
 
-        // Union @ api_types.h:329:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
+        // Union @ api_types.h:328:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 1880, Pack = 8)]
         public struct ecs_iter_t_iter
         {
@@ -3005,7 +3006,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ expr.h:104:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Struct @ expr.h:117:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
     public struct ecs_expr_desc_t
     {
