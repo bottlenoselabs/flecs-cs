@@ -1266,95 +1266,95 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern void* _flecs_hashmap_next(flecs_hashmap_iter_t* it, ecs_size_t key_size, void* key_out, ecs_size_t value_size);
 
-    // Function @ meta.h:312:19 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:316:19 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_meta_cursor_t ecs_meta_cursor(ecs_world_t* world, ecs_entity_t type, void* ptr);
 
-    // Function @ meta.h:319:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:323:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_meta_get_ptr(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:324:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:328:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_next(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:329:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:333:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_move(ecs_meta_cursor_t* cursor, int pos);
 
-    // Function @ meta.h:335:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:339:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_member(ecs_meta_cursor_t* cursor, CString8U name);
 
-    // Function @ meta.h:341:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:345:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_push(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:346:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:350:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_pop(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:351:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:355:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_is_collection(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:360:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:364:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_bool(ecs_meta_cursor_t* cursor, CBool value);
 
-    // Function @ meta.h:366:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:370:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_char(ecs_meta_cursor_t* cursor, byte value);
 
-    // Function @ meta.h:372:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:376:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_int(ecs_meta_cursor_t* cursor, long value);
 
-    // Function @ meta.h:378:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:382:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_uint(ecs_meta_cursor_t* cursor, ulong value);
 
-    // Function @ meta.h:384:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:388:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_float(ecs_meta_cursor_t* cursor, double value);
 
-    // Function @ meta.h:390:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:394:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_string(ecs_meta_cursor_t* cursor, CString8U value);
 
-    // Function @ meta.h:396:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:400:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_string_literal(ecs_meta_cursor_t* cursor, CString8U value);
 
-    // Function @ meta.h:402:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:406:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_entity(ecs_meta_cursor_t* cursor, ecs_entity_t value);
 
-    // Function @ meta.h:408:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:412:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_null(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:422:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:426:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_enum_init(ecs_world_t* world, ecs_enum_desc_t* desc);
 
-    // Function @ meta.h:435:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:439:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_bitmask_init(ecs_world_t* world, ecs_bitmask_desc_t* desc);
 
-    // Function @ meta.h:449:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:453:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_array_init(ecs_world_t* world, ecs_array_desc_t* desc);
 
-    // Function @ meta.h:462:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:466:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_vector_init(ecs_world_t* world, ecs_vector_desc_t* desc);
 
-    // Function @ meta.h:475:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:479:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_struct_init(ecs_world_t* world, ecs_struct_desc_t* desc);
 
-    // Function @ meta.h:487:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:491:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern void FlecsMetaImport(ecs_world_t* world);
 
@@ -1839,7 +1839,7 @@ public static unsafe partial class flecs
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_system_status_t, void*, void> Pointer;
     }
 
-    // FunctionPointer @ meta.h:307:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // FunctionPointer @ meta.h:311:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FnPtr_FLECS_Ecs_world_tPtr_CString8U_VoidPtr_Ecs_entity_t
     {
@@ -2873,7 +2873,7 @@ public static unsafe partial class flecs
         public int index;
     }
 
-    // Struct @ meta.h:309:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:313:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 2080, Pack = 8)]
     public struct ecs_meta_cursor_t
     {
@@ -2899,8 +2899,11 @@ public static unsafe partial class flecs
         [FieldOffset(2056)] // size = 4, padding = 0
         public int depth;
 
-        [FieldOffset(2060)] // size = 1, padding = 3
+        [FieldOffset(2060)] // size = 1, padding = 0
         public CBool valid;
+
+        [FieldOffset(2061)] // size = 1, padding = 2
+        public CBool is_primitive_scope;
 
         [FieldOffset(2064)] // size = 8, padding = 0
         public FnPtr_FLECS_Ecs_world_tPtr_CString8U_VoidPtr_Ecs_entity_t lookup_action;
@@ -2909,7 +2912,7 @@ public static unsafe partial class flecs
         public void* lookup_ctx;
     }
 
-    // Struct @ meta.h:418:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:422:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 1080, Pack = 8)]
     public struct ecs_enum_desc_t
     {
@@ -2933,7 +2936,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ meta.h:431:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:435:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 1080, Pack = 8)]
     public struct ecs_bitmask_desc_t
     {
@@ -2957,7 +2960,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ meta.h:445:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:449:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 328, Pack = 8)]
     public struct ecs_array_desc_t
     {
@@ -2971,7 +2974,7 @@ public static unsafe partial class flecs
         public int count;
     }
 
-    // Struct @ meta.h:458:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:462:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 320, Pack = 8)]
     public struct ecs_vector_desc_t
     {
@@ -2982,7 +2985,7 @@ public static unsafe partial class flecs
         public ecs_entity_t type;
     }
 
-    // Struct @ meta.h:471:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:475:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 1592, Pack = 8)]
     public struct ecs_struct_desc_t
     {
@@ -3581,7 +3584,7 @@ public static unsafe partial class flecs
         public int remaining;
     }
 
-    // Struct @ meta.h:297:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:300:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 64, Pack = 8)]
     public struct ecs_meta_scope_t
     {
@@ -3667,7 +3670,7 @@ public static unsafe partial class flecs
         public ecs_entity_t member;
     }
 
-    // Struct @ meta.h:274:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:277:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
     public struct ecs_meta_type_op_t
     {
@@ -3972,33 +3975,34 @@ public static unsafe partial class flecs
         EcsSystemDeactivated = 4
     }
 
-    // Enum @ meta.h:263:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Enum @ meta.h:266:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     public enum ecs_meta_type_op_kind_t : int
     {
-        EcsOpEnum = 0,
-        EcsOpBitmask = 1,
-        EcsOpArray = 2,
-        EcsOpVector = 3,
-        EcsOpPush = 4,
-        EcsOpPop = 5,
-        EcsOpPrimitive = 6,
-        EcsOpBool = 7,
-        EcsOpChar = 8,
-        EcsOpByte = 9,
-        EcsOpU8 = 10,
-        EcsOpU16 = 11,
-        EcsOpU32 = 12,
-        EcsOpU64 = 13,
-        EcsOpI8 = 14,
-        EcsOpI16 = 15,
-        EcsOpI32 = 16,
-        EcsOpI64 = 17,
-        EcsOpF32 = 18,
-        EcsOpF64 = 19,
-        EcsOpUPtr = 20,
-        EcsOpIPtr = 21,
-        EcsOpString = 22,
-        EcsOpEntity = 23
+        EcsOpArray = 0,
+        EcsOpVector = 1,
+        EcsOpPush = 2,
+        EcsOpPop = 3,
+        EcsOpScope = 4,
+        EcsOpEnum = 5,
+        EcsOpBitmask = 6,
+        EcsOpPrimitive = 7,
+        EcsOpBool = 8,
+        EcsOpChar = 9,
+        EcsOpByte = 10,
+        EcsOpU8 = 11,
+        EcsOpU16 = 12,
+        EcsOpU32 = 13,
+        EcsOpU64 = 14,
+        EcsOpI8 = 15,
+        EcsOpI16 = 16,
+        EcsOpI32 = 17,
+        EcsOpI64 = 18,
+        EcsOpF32 = 19,
+        EcsOpF64 = 20,
+        EcsOpUPtr = 21,
+        EcsOpIPtr = 22,
+        EcsOpString = 23,
+        EcsOpEntity = 24
     }
 
     // Pseudo enum 'ecs_type_kind_t' @ meta.h:129:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
@@ -4222,7 +4226,7 @@ public static unsafe partial class flecs
     // MacroObjectLike @ meta.h:71:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     public const int ECS_MEMBER_DESC_CACHE_SIZE = 32;
 
-    // MacroObjectLike @ meta.h:283:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // MacroObjectLike @ meta.h:286:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     public const int ECS_META_MAX_SCOPE_DEPTH = 32;
 
     // MacroObjectLike @ stats.h:22:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/stats.h)
