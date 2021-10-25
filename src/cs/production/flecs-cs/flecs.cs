@@ -22,51 +22,39 @@ public static unsafe partial class flecs
 {
     private const string LibraryName = "flecs";
 
-    // Function @ log.h:38:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:42:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
-    public static extern void _ecs_trace(int level, CString8U file, int line, CString8U fmt);
+    public static extern void _ecs_log(int level, CString8U file, int line, CString8U fmt);
 
-    // Function @ log.h:46:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
-    [DllImport(LibraryName)]
-    public static extern void _ecs_warn(CString8U file, int line, CString8U fmt);
-
-    // Function @ log.h:53:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
-    [DllImport(LibraryName)]
-    public static extern void _ecs_err(CString8U file, int line, CString8U fmt);
-
-    // Function @ log.h:60:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
-    [DllImport(LibraryName)]
-    public static extern void _ecs_fatal(CString8U file, int line, CString8U fmt);
-
-    // Function @ log.h:67:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:50:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void _ecs_deprecated(CString8U file, int line, CString8U msg);
 
-    // Function @ log.h:73:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:56:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void ecs_log_push();
 
-    // Function @ log.h:76:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:59:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void ecs_log_pop();
 
-    // Function @ log.h:135:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:68:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_strerror(int error_code);
 
-    // Function @ log.h:140:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:73:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void _ecs_abort(int error_code, CString8U file, int line, CString8U fmt);
 
-    // Function @ log.h:152:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:82:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void _ecs_assert(CBool condition, int error_code, CString8U condition_str, CString8U file, int line, CString8U fmt);
 
-    // Function @ log.h:170:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:96:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void _ecs_parser_error(CString8U name, CString8U expr, long column, CString8U fmt);
 
-    // Function @ log.h:178:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // Function @ log.h:104:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern void _ecs_parser_errorv(CString8U name, CString8U expr, long column, CString8U fmt, IntPtr args);
 
@@ -306,83 +294,87 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern CBool ecs_strbuf_list_appendstr(ecs_strbuf_t* buffer, CString8U str);
 
-    // Function @ os_api.h:258:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:271:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern void ecs_os_init();
 
-    // Function @ os_api.h:261:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:274:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern void ecs_os_fini();
 
-    // Function @ os_api.h:264:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:277:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern void ecs_os_set_api(ecs_os_api_t* os_api);
 
-    // Function @ os_api.h:268:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:281:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern void ecs_os_set_api_defaults();
 
-    // Function @ os_api.h:387:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:400:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
-    public static extern void ecs_os_log(CString8U fmt);
+    public static extern void ecs_os_dbg(CString8U file, int line, CString8U msg);
 
-    // Function @ os_api.h:390:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:403:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
-    public static extern void ecs_os_warn(CString8U fmt);
+    public static extern void ecs_os_trace(CString8U file, int line, CString8U msg);
 
-    // Function @ os_api.h:393:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:406:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
-    public static extern void ecs_os_err(CString8U fmt);
+    public static extern void ecs_os_warn(CString8U file, int line, CString8U msg);
 
-    // Function @ os_api.h:396:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:409:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
-    public static extern void ecs_os_dbg(CString8U fmt);
+    public static extern void ecs_os_err(CString8U file, int line, CString8U msg);
 
-    // Function @ os_api.h:399:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:412:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    [DllImport(LibraryName)]
+    public static extern void ecs_os_fatal(CString8U file, int line, CString8U msg);
+
+    // Function @ os_api.h:415:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_os_strerror(int err);
 
-    // Function @ os_api.h:415:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:431:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern void ecs_sleepf(double t);
 
-    // Function @ os_api.h:420:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:436:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern double ecs_time_measure(ecs_time_t* start);
 
-    // Function @ os_api.h:425:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:441:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern ecs_time_t ecs_time_sub(ecs_time_t t1, ecs_time_t t2);
 
-    // Function @ os_api.h:431:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:447:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern double ecs_time_to_double(ecs_time_t t);
 
-    // Function @ os_api.h:435:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:451:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_os_memdup(void* src, ecs_size_t size);
 
-    // Function @ os_api.h:441:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:457:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_os_has_heap();
 
-    // Function @ os_api.h:445:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:461:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_os_has_threading();
 
-    // Function @ os_api.h:449:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:465:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_os_has_time();
 
-    // Function @ os_api.h:453:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:469:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_os_has_logging();
 
-    // Function @ os_api.h:457:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:473:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_os_has_dl();
 
-    // Function @ os_api.h:461:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // Function @ os_api.h:477:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_os_has_modules();
 
@@ -426,659 +418,659 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern int ecs_type_match(ecs_world_t* world, ecs_table_t* table, ecs_type_t type, int offset, ecs_id_t id, ecs_entity_t rel, int min_depth, int max_depth, ecs_entity_t* subject_out, int* count_out);
 
-    // Function @ flecs.h:941:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:942:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_world_t* ecs_init();
 
-    // Function @ flecs.h:948:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:949:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_world_t* ecs_mini();
 
-    // Function @ flecs.h:958:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:959:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_world_t* ecs_init_w_args(int argc, CString8U* argv);
 
-    // Function @ flecs.h:969:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:970:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_fini(ecs_world_t* world);
 
-    // Function @ flecs.h:980:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:981:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_atfini(ecs_world_t* world, ecs_fini_action_t action, void* ctx);
 
-    // Function @ flecs.h:993:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:994:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_run_post_frame(ecs_world_t* world, ecs_fini_action_t action, void* ctx);
 
-    // Function @ flecs.h:1005:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1006:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_quit(ecs_world_t* world);
 
-    // Function @ flecs.h:1013:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1014:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_should_quit(ecs_world_t* world);
 
-    // Function @ flecs.h:1023:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1024:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_set_component_actions_w_id(ecs_world_t* world, ecs_id_t id, EcsComponentLifecycle* actions);
 
-    // Function @ flecs.h:1036:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1037:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_set_context(ecs_world_t* world, void* ctx);
 
-    // Function @ flecs.h:1048:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1049:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_context(ecs_world_t* world);
 
-    // Function @ flecs.h:1058:25 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1059:25 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_world_info_t* ecs_get_world_info(ecs_world_t* world);
 
-    // Function @ flecs.h:1070:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1071:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_dim(ecs_world_t* world, int entity_count);
 
-    // Function @ flecs.h:1090:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1091:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_set_entity_range(ecs_world_t* world, ecs_entity_t id_start, ecs_entity_t id_end);
 
-    // Function @ flecs.h:1106:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1107:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_enable_range_check(ecs_world_t* world, CBool enable);
 
-    // Function @ flecs.h:1127:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1128:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_enable_locking(ecs_world_t* world, CBool enable);
 
-    // Function @ flecs.h:1137:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1138:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_lock(ecs_world_t* world);
 
-    // Function @ flecs.h:1146:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1147:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_unlock(ecs_world_t* world);
 
-    // Function @ flecs.h:1160:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1161:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_begin_wait(ecs_world_t* world);
 
-    // Function @ flecs.h:1170:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1171:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_end_wait(ecs_world_t* world);
 
-    // Function @ flecs.h:1191:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1192:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
-    public static extern void ecs_tracing_enable(int level);
+    public static extern void ecs_log_set_level(int level);
 
-    // Function @ flecs.h:1200:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1201:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
-    public static extern void ecs_tracing_color_enable(CBool enabled);
+    public static extern void ecs_log_enable_colors(CBool enabled);
 
-    // Function @ flecs.h:1214:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1215:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_measure_frame_time(ecs_world_t* world, CBool enable);
 
-    // Function @ flecs.h:1228:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1229:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_measure_system_time(ecs_world_t* world, CBool enable);
 
-    // Function @ flecs.h:1248:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1249:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_set_target_fps(ecs_world_t* world, float fps);
 
-    // Function @ flecs.h:1254:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1255:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_get_threads(ecs_world_t* world);
 
-    // Function @ flecs.h:1271:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1272:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_new_id(ecs_world_t* world);
 
-    // Function @ flecs.h:1289:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1290:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_new_low_id(ecs_world_t* world);
 
-    // Function @ flecs.h:1301:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1302:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_new_w_id(ecs_world_t* world, ecs_id_t id);
 
-    // Function @ flecs.h:1324:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1325:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_entity_init(ecs_world_t* world, ecs_entity_desc_t* desc);
 
-    // Function @ flecs.h:1355:21 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1356:21 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t* ecs_bulk_init(ecs_world_t* world, ecs_bulk_desc_t* desc);
 
-    // Function @ flecs.h:1373:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1374:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_component_init(ecs_world_t* world, ecs_component_desc_t* desc);
 
-    // Function @ flecs.h:1396:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1397:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_type_init(ecs_world_t* world, ecs_type_desc_t* desc);
 
-    // Function @ flecs.h:1410:21 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1411:21 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t* ecs_bulk_new_w_id(ecs_world_t* world, ecs_id_t id, int count);
 
-    // Function @ flecs.h:1427:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1428:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_clone(ecs_world_t* world, ecs_entity_t dst, ecs_entity_t src, CBool copy_value);
 
-    // Function @ flecs.h:1450:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1451:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_add_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1465:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1466:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_remove_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1492:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1493:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_enable_component_w_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id, CBool enable);
 
-    // Function @ flecs.h:1509:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1510:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_is_component_enabled_w_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1530:10 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1531:10 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_id_t ecs_make_pair(ecs_entity_t relation, ecs_entity_t @object);
 
-    // Function @ flecs.h:1551:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1552:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_clear(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:1565:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1566:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_delete(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:1577:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1578:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_delete_with(ecs_world_t* world, ecs_id_t id);
 
-    // Function @ flecs.h:1589:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1590:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_remove_all(ecs_world_t* world, ecs_id_t id);
 
-    // Function @ flecs.h:1611:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1612:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1629:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1630:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_ref_w_id(ecs_world_t* world, ecs_ref_t* @ref, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1645:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1646:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_case(ecs_world_t* world, ecs_entity_t e, ecs_entity_t sw);
 
-    // Function @ flecs.h:1673:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1674:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_mut_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id, CBool* is_added);
 
-    // Function @ flecs.h:1693:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1694:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_emplace_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1709:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1710:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_modified_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:1728:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1729:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_set_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id, ulong size, void* ptr);
 
-    // Function @ flecs.h:1763:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1764:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_is_valid(ecs_world_t* world, ecs_entity_t e);
 
-    // Function @ flecs.h:1776:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1777:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_is_alive(ecs_world_t* world, ecs_entity_t e);
 
-    // Function @ flecs.h:1786:10 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1787:10 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_id_t ecs_strip_generation(ecs_entity_t e);
 
-    // Function @ flecs.h:1806:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1807:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_alive(ecs_world_t* world, ecs_entity_t e);
 
-    // Function @ flecs.h:1834:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1835:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_ensure(ecs_world_t* world, ecs_entity_t e);
 
-    // Function @ flecs.h:1846:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1847:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_exists(ecs_world_t* world, ecs_entity_t e);
 
-    // Function @ flecs.h:1857:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1858:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_type_t ecs_get_type(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:1868:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1869:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_table_t* ecs_get_table(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:1879:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1880:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_typeid(ecs_world_t* world, ecs_id_t e);
 
-    // Function @ flecs.h:1891:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1892:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_get_name(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:1903:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1904:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_get_symbol(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:1919:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1920:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_set_name(ecs_world_t* world, ecs_entity_t entity, CString8U name);
 
-    // Function @ flecs.h:1936:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1937:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_set_symbol(ecs_world_t* world, ecs_entity_t entity, CString8U symbol);
 
-    // Function @ flecs.h:1949:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1950:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_role_str(ecs_entity_t entity);
 
-    // Function @ flecs.h:1962:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1963:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_id_str(ecs_world_t* world, ecs_id_t id);
 
-    // Function @ flecs.h:1967:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1968:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ulong ecs_id_str_w_buf(ecs_world_t* world, ecs_id_t id, CString8U buffer, ulong buffer_len);
 
-    // Function @ flecs.h:1983:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:1984:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_has_id(ecs_world_t* world, ecs_entity_t entity, ecs_id_t id);
 
-    // Function @ flecs.h:2003:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2004:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_object(ecs_world_t* world, ecs_entity_t entity, ecs_entity_t rel, int index);
 
-    // Function @ flecs.h:2028:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2029:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_object_for_id(ecs_world_t* world, ecs_entity_t entity, ecs_entity_t rel, ecs_id_t id);
 
-    // Function @ flecs.h:2044:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2045:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_enable(ecs_world_t* world, ecs_entity_t entity, CBool enabled);
 
-    // Function @ flecs.h:2057:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2058:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_count_id(ecs_world_t* world, ecs_id_t entity);
 
-    // Function @ flecs.h:2078:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2079:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_lookup(ecs_world_t* world, CString8U name);
 
-    // Function @ flecs.h:2092:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2093:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_lookup_child(ecs_world_t* world, ecs_entity_t parent, CString8U name);
 
-    // Function @ flecs.h:2116:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2117:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_lookup_path_w_sep(ecs_world_t* world, ecs_entity_t parent, CString8U path, CString8U sep, CString8U prefix, CBool recursive);
 
-    // Function @ flecs.h:2132:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2133:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_lookup_symbol(ecs_world_t* world, CString8U symbol, CBool lookup_as_path);
 
-    // Function @ flecs.h:2139:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2140:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_use(ecs_world_t* world, ecs_entity_t entity, CString8U name);
 
-    // Function @ flecs.h:2170:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2171:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_get_path_w_sep(ecs_world_t* world, ecs_entity_t parent, ecs_entity_t child, CString8U sep, CString8U prefix);
 
-    // Function @ flecs.h:2193:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2194:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_new_from_path_w_sep(ecs_world_t* world, ecs_entity_t parent, CString8U path, CString8U sep, CString8U prefix);
 
-    // Function @ flecs.h:2215:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2216:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_add_path_w_sep(ecs_world_t* world, ecs_entity_t entity, ecs_entity_t parent, CString8U path, CString8U sep, CString8U prefix);
 
-    // Function @ flecs.h:2243:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2244:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_set_scope(ecs_world_t* world, ecs_entity_t scope);
 
-    // Function @ flecs.h:2255:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2256:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_scope(ecs_world_t* world);
 
-    // Function @ flecs.h:2266:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2267:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_set_with(ecs_world_t* world, ecs_id_t id);
 
-    // Function @ flecs.h:2278:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2279:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_get_with(ecs_world_t* world);
 
-    // Function @ flecs.h:2291:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2292:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_set_name_prefix(ecs_world_t* world, CString8U prefix);
 
-    // Function @ flecs.h:2316:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2317:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_iter_t ecs_term_iter(ecs_world_t* world, ecs_term_t* term);
 
-    // Function @ flecs.h:2330:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2331:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_next(ecs_iter_t* it);
 
-    // Function @ flecs.h:2339:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2340:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_id_is_set(ecs_term_id_t* id);
 
-    // Function @ flecs.h:2354:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2355:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_is_initialized(ecs_term_t* term);
 
-    // Function @ flecs.h:2381:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2382:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_is_trivial(ecs_term_t* term);
 
-    // Function @ flecs.h:2405:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2406:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_term_finalize(ecs_world_t* world, CString8U name, ecs_term_t* term);
 
-    // Function @ flecs.h:2419:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2420:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_term_t ecs_term_copy(ecs_term_t* src);
 
-    // Function @ flecs.h:2433:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2434:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_term_t ecs_term_move(ecs_term_t* src);
 
-    // Function @ flecs.h:2443:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2444:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_term_fini(ecs_term_t* term);
 
-    // Function @ flecs.h:2454:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2455:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_id_match(ecs_id_t id, ecs_id_t pattern);
 
-    // Function @ flecs.h:2464:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2465:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_id_is_pair(ecs_id_t id);
 
-    // Function @ flecs.h:2473:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2474:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_id_is_wildcard(ecs_id_t id);
 
-    // Function @ flecs.h:2505:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2506:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_filter_init(ecs_world_t* world, ecs_filter_t* filter_out, ecs_filter_desc_t* desc);
 
-    // Function @ flecs.h:2516:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2517:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_filter_fini(ecs_filter_t* filter);
 
-    // Function @ flecs.h:2533:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2534:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_filter_finalize(ecs_world_t* world, ecs_filter_t* filter);
 
-    // Function @ flecs.h:2542:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2543:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_term_str(ecs_world_t* world, ecs_term_t* term);
 
-    // Function @ flecs.h:2551:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2552:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_filter_str(ecs_world_t* world, ecs_filter_t* filter);
 
-    // Function @ flecs.h:2565:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2566:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_iter_t ecs_filter_iter(ecs_world_t* world, ecs_filter_t* filter);
 
-    // Function @ flecs.h:2579:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2580:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_iter_t ecs_filter_chain_iter(ecs_iter_t* it, ecs_filter_t* filter);
 
-    // Function @ flecs.h:2593:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2594:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_filter_next(ecs_iter_t* iter);
 
-    // Function @ flecs.h:2598:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2599:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_filter_move(ecs_filter_t* dst, ecs_filter_t* src);
 
-    // Function @ flecs.h:2604:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2605:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_filter_copy(ecs_filter_t* dst, ecs_filter_t* src);
 
-    // Function @ flecs.h:2650:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2651:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_query_t* ecs_query_init(ecs_world_t* world, ecs_query_desc_t* desc);
 
-    // Function @ flecs.h:2662:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2663:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_query_fini(ecs_query_t* query);
 
-    // Function @ flecs.h:2672:21 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2673:21 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_filter_t* ecs_query_get_filter(ecs_query_t* query);
 
-    // Function @ flecs.h:2703:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2704:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_iter_t ecs_query_iter(ecs_world_t* world, ecs_query_t* query);
 
-    // Function @ flecs.h:2718:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2719:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_iter_t ecs_query_iter_page(ecs_world_t* world, ecs_query_t* query, int offset, int limit);
 
-    // Function @ flecs.h:2734:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2735:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_query_next(ecs_iter_t* iter);
 
-    // Function @ flecs.h:2753:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2754:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_query_next_worker(ecs_iter_t* it, int stage_current, int stage_count);
 
-    // Function @ flecs.h:2769:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2770:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_query_changed(ecs_query_t* query);
 
-    // Function @ flecs.h:2781:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2782:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_query_orphaned(ecs_query_t* query);
 
-    // Function @ flecs.h:2806:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2807:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_trigger_init(ecs_world_t* world, ecs_trigger_desc_t* desc);
 
-    // Function @ flecs.h:2819:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2820:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_trigger_ctx(ecs_world_t* world, ecs_entity_t trigger);
 
-    // Function @ flecs.h:2833:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2834:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_trigger_binding_ctx(ecs_world_t* world, ecs_entity_t trigger);
 
-    // Function @ flecs.h:2868:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2869:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_emit(ecs_world_t* world, ecs_event_desc_t* desc);
 
-    // Function @ flecs.h:2889:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2890:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_observer_init(ecs_world_t* world, ecs_observer_desc_t* desc);
 
-    // Function @ flecs.h:2894:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2895:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_observer_ctx(ecs_world_t* world, ecs_entity_t observer);
 
-    // Function @ flecs.h:2899:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2900:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_get_observer_binding_ctx(ecs_world_t* world, ecs_entity_t observer);
 
-    // Function @ flecs.h:2935:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2936:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_term_w_size(ecs_iter_t* it, ulong size, int index);
 
-    // Function @ flecs.h:2949:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2950:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_is_readonly(ecs_iter_t* it, int index);
 
-    // Function @ flecs.h:2960:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2961:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_is_set(ecs_iter_t* it, int index);
 
-    // Function @ flecs.h:2974:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2975:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_term_is_owned(ecs_iter_t* it, int index);
 
-    // Function @ flecs.h:2991:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:2992:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_iter_str(ecs_iter_t* it);
 
-    // Function @ flecs.h:3013:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3014:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_iter_find_column(ecs_iter_t* it, ecs_id_t id);
 
-    // Function @ flecs.h:3045:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3046:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_iter_column_w_size(ecs_iter_t* it, ulong size, int index);
 
-    // Function @ flecs.h:3059:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3060:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ulong ecs_iter_column_size(ecs_iter_t* it, int index);
 
-    // Function @ flecs.h:3090:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3091:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern float ecs_frame_begin(ecs_world_t* world, float delta_time);
 
-    // Function @ flecs.h:3101:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3102:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_frame_end(ecs_world_t* world);
 
-    // Function @ flecs.h:3124:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3125:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_staging_begin(ecs_world_t* world);
 
-    // Function @ flecs.h:3137:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3138:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_staging_end(ecs_world_t* world);
 
-    // Function @ flecs.h:3151:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3152:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_merge(ecs_world_t* world);
 
-    // Function @ flecs.h:3164:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3165:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_defer_begin(ecs_world_t* world);
 
-    // Function @ flecs.h:3173:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3174:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_is_deferred(ecs_world_t* world);
 
-    // Function @ flecs.h:3185:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3186:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_defer_end(ecs_world_t* world);
 
-    // Function @ flecs.h:3205:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3206:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_set_automerge(ecs_world_t* world, CBool automerge);
 
-    // Function @ flecs.h:3223:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3224:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_set_stages(ecs_world_t* world, int stages);
 
-    // Function @ flecs.h:3234:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3235:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_get_stage_count(ecs_world_t* world);
 
-    // Function @ flecs.h:3245:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3246:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_get_stage_id(ecs_world_t* world);
 
-    // Function @ flecs.h:3264:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3265:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_world_t* ecs_get_stage(ecs_world_t* world, int stage_id);
 
-    // Function @ flecs.h:3273:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3274:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
-    public static extern ecs_world_t* ecs_get_world(ecs_world_t* world);
+    public static extern ecs_world_t* ecs_get_world(ecs_poly_t* world);
 
-    // Function @ flecs.h:3284:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3285:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_stage_is_readonly(ecs_world_t* stage);
 
-    // Function @ flecs.h:3306:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3307:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_world_t* ecs_async_stage_new(ecs_world_t* world);
 
-    // Function @ flecs.h:3316:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3317:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_async_stage_free(ecs_world_t* stage);
 
-    // Function @ flecs.h:3326:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3327:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_stage_is_async(ecs_world_t* stage);
 
-    // Function @ flecs.h:3352:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3353:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_table_t* ecs_table_from_str(ecs_world_t* world, CString8U type);
 
-    // Function @ flecs.h:3362:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3363:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_type_t ecs_table_get_type(ecs_table_t* table);
 
-    // Function @ flecs.h:3371:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3372:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_type_t ecs_table_get_storage_type(ecs_table_t* table);
 
-    // Function @ flecs.h:3380:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3381:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_table_storage_count(ecs_table_t* table);
 
-    // Function @ flecs.h:3384:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3385:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_table_type_to_storage_index(ecs_table_t* table, int index);
 
-    // Function @ flecs.h:3389:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3390:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_table_storage_to_type_index(ecs_table_t* table, int index);
 
-    // Function @ flecs.h:3403:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3404:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern int ecs_table_count(ecs_table_t* table);
 
-    // Function @ flecs.h:3416:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3417:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_table_t* ecs_table_add_id(ecs_world_t* world, ecs_table_t* table, ecs_id_t id);
 
-    // Function @ flecs.h:3431:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3432:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_table_t* ecs_table_remove_id(ecs_world_t* world, ecs_table_t* table, ecs_id_t id);
 
-    // Function @ flecs.h:3452:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3453:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_table_lock(ecs_world_t* world, ecs_table_t* table);
 
-    // Function @ flecs.h:3463:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3464:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void ecs_table_unlock(ecs_world_t* world, ecs_table_t* table);
 
-    // Function @ flecs.h:3475:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3476:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_table_has_module(ecs_table_t* table);
 
-    // Function @ flecs.h:3501:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3502:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_commit(ecs_world_t* world, ecs_entity_t entity, ecs_record_t* @record, ecs_table_t* table, ecs_ids_t* added, ecs_ids_t* removed);
 
-    // Function @ flecs.h:3511:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3512:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern ecs_record_t* ecs_record_find(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ flecs.h:3517:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Function @ flecs.h:3518:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [DllImport(LibraryName)]
     public static extern void* ecs_record_get_column(ecs_record_t* r, int column, ulong c_size);
 
@@ -1298,63 +1290,67 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern int ecs_meta_is_collection(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:364:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:360:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    [DllImport(LibraryName)]
+    public static extern ecs_entity_t ecs_meta_get_type(ecs_meta_cursor_t* cursor);
+
+    // Function @ meta.h:369:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_bool(ecs_meta_cursor_t* cursor, CBool value);
 
-    // Function @ meta.h:370:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:375:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_char(ecs_meta_cursor_t* cursor, byte value);
 
-    // Function @ meta.h:376:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:381:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_int(ecs_meta_cursor_t* cursor, long value);
 
-    // Function @ meta.h:382:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:387:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_uint(ecs_meta_cursor_t* cursor, ulong value);
 
-    // Function @ meta.h:388:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:393:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_float(ecs_meta_cursor_t* cursor, double value);
 
-    // Function @ meta.h:394:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:399:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_string(ecs_meta_cursor_t* cursor, CString8U value);
 
-    // Function @ meta.h:400:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:405:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_string_literal(ecs_meta_cursor_t* cursor, CString8U value);
 
-    // Function @ meta.h:406:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:411:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_entity(ecs_meta_cursor_t* cursor, ecs_entity_t value);
 
-    // Function @ meta.h:412:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:417:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_set_null(ecs_meta_cursor_t* cursor);
 
-    // Function @ meta.h:426:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:431:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_enum_init(ecs_world_t* world, ecs_enum_desc_t* desc);
 
-    // Function @ meta.h:439:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:444:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_bitmask_init(ecs_world_t* world, ecs_bitmask_desc_t* desc);
 
-    // Function @ meta.h:453:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:458:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_array_init(ecs_world_t* world, ecs_array_desc_t* desc);
 
-    // Function @ meta.h:466:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:471:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_vector_init(ecs_world_t* world, ecs_vector_desc_t* desc);
 
-    // Function @ meta.h:479:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:484:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern ecs_entity_t ecs_struct_init(ecs_world_t* world, ecs_struct_desc_t* desc);
 
-    // Function @ meta.h:486:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Function @ meta.h:491:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [DllImport(LibraryName)]
     public static extern void FlecsMetaImport(ecs_world_t* world);
 
@@ -1386,7 +1382,7 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern CString8U ecs_parse_term(ecs_world_t* world, CString8U name, CString8U expr, CString8U ptr, ecs_term_t* term_out);
 
-    // Function @ meta_c.h:57:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta_c.h)
+    // Function @ meta_c.h:70:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta_c.h)
     [DllImport(LibraryName)]
     public static extern int ecs_meta_from_desc(ecs_world_t* world, ecs_entity_t component, ecs_type_kind_t kind, CString8U desc);
 
@@ -1406,43 +1402,43 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern CString8U ecs_astresc(byte delimiter, CString8U @in);
 
-    // Function @ expr.h:132:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:131:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
-    public static extern CString8U ecs_parse_expr(ecs_world_t* world, CString8U ptr, ecs_entity_t type, void* data_out, ecs_expr_desc_t* desc);
+    public static extern CString8U ecs_parse_expr(ecs_world_t* world, CString8U ptr, ecs_entity_t type, void* data_out, ecs_parse_expr_desc_t* desc);
 
-    // Function @ expr.h:149:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:148:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_ptr_to_expr(ecs_world_t* world, ecs_entity_t type, void* data);
 
-    // Function @ expr.h:164:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:163:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern int ecs_ptr_to_expr_buf(ecs_world_t* world, ecs_entity_t type, void* data, ecs_strbuf_t* buf_out);
 
-    // Function @ expr.h:182:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:181:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern int ecs_primitive_to_expr_buf(ecs_world_t* world, ecs_primitive_kind_t kind, void* data, ecs_strbuf_t* str);
 
-    // Function @ expr.h:199:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
+    // Function @ expr.h:198:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_parse_expr_token(CString8U name, CString8U expr, CString8U ptr, CString8U token);
 
-    // Function @ json.h:37:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:42:13 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
-    public static extern CString8U ecs_parse_json(ecs_world_t* world, CString8U name, CString8U expr, CString8U ptr, ecs_entity_t type, void* data_out);
+    public static extern CString8U ecs_parse_json(ecs_world_t* world, CString8U ptr, ecs_entity_t type, void* data_out, ecs_parse_json_desc_t* desc);
 
-    // Function @ json.h:55:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:59:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_ptr_to_json(ecs_world_t* world, ecs_entity_t type, void* data);
 
-    // Function @ json.h:70:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:74:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern int ecs_ptr_to_json_buf(ecs_world_t* world, ecs_entity_t type, void* data, ecs_strbuf_t* buf_out);
 
-    // Function @ json.h:87:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:91:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_entity_to_json(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ json.h:100:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:104:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern int ecs_entity_to_json_buf(ecs_world_t* world, ecs_entity_t entity, ecs_strbuf_t* buf_out);
 
@@ -1557,35 +1553,35 @@ public static unsafe partial class flecs
         public delegate* unmanaged<void*, void*, int> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:168:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:169:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_fini_action_t
     {
         public delegate* unmanaged<ecs_world_t*, void*, void> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:164:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:165:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_module_action_t
     {
         public delegate* unmanaged<ecs_world_t*, void> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:182:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:183:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_hash_value_action_t
     {
         public delegate* unmanaged<void*, ulong> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:177:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:178:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_compare_action_t
     {
         public delegate* unmanaged<void*, void*, int> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:146:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:147:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_iter_next_action_t
     {
@@ -1736,38 +1732,38 @@ public static unsafe partial class flecs
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_os_api_log_t
     {
-        public delegate* unmanaged<CString8U, IntPtr, void> Pointer;
+        public delegate* unmanaged<int, CString8U, int, CString8U, void> Pointer;
     }
 
-    // FunctionPointer @ os_api.h:168:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // FunctionPointer @ os_api.h:170:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_os_api_abort_t
     {
         public delegate* unmanaged<void> Pointer;
     }
 
-    // FunctionPointer @ os_api.h:173:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // FunctionPointer @ os_api.h:175:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_os_api_dlopen_t
     {
         public delegate* unmanaged<CString8U, ecs_os_dl_t> Pointer;
     }
 
-    // FunctionPointer @ os_api.h:177:17 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // FunctionPointer @ os_api.h:179:17 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_os_api_dlproc_t
     {
         public delegate* unmanaged<ecs_os_dl_t, CString8U, ecs_os_proc_t> Pointer;
     }
 
-    // FunctionPointer @ os_api.h:182:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // FunctionPointer @ os_api.h:184:8 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_os_api_dlclose_t
     {
         public delegate* unmanaged<ecs_os_dl_t, void> Pointer;
     }
 
-    // FunctionPointer @ os_api.h:186:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    // FunctionPointer @ os_api.h:188:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_os_api_module_to_path_t
     {
@@ -1816,28 +1812,28 @@ public static unsafe partial class flecs
         public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, void*, ulong, int, void*, void> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:150:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:151:15 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_order_by_action_t
     {
         public delegate* unmanaged<ecs_entity_t, void*, ecs_entity_t, void*, int> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:157:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:158:20 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_group_by_action_t
     {
         public delegate* unmanaged<ecs_world_t*, ecs_type_t, ecs_id_t, void*, ulong> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:173:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:174:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_ctx_free_t
     {
         public delegate* unmanaged<void*, void> Pointer;
     }
 
-    // FunctionPointer @ flecs.h:143:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // FunctionPointer @ flecs.h:144:16 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_iter_action_t
     {
@@ -1948,8 +1944,8 @@ public static unsafe partial class flecs
         public int list_sp;
     }
 
-    // Struct @ os_api.h:252:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
-    [StructLayout(LayoutKind.Explicit, Size = 256, Pack = 8)]
+    // Struct @ os_api.h:265:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
+    [StructLayout(LayoutKind.Explicit, Size = 248, Pack = 8)]
     public struct ecs_os_api_t
     {
         [FieldOffset(0)] // size = 8, padding = 0
@@ -2022,31 +2018,31 @@ public static unsafe partial class flecs
         public ecs_os_api_log_t log_;
 
         [FieldOffset(184)] // size = 8, padding = 0
-        public ecs_os_api_log_t log_error_;
-
-        [FieldOffset(192)] // size = 8, padding = 0
-        public ecs_os_api_log_t log_debug_;
-
-        [FieldOffset(200)] // size = 8, padding = 0
-        public ecs_os_api_log_t log_warning_;
-
-        [FieldOffset(208)] // size = 8, padding = 0
         public ecs_os_api_abort_t abort_;
 
-        [FieldOffset(216)] // size = 8, padding = 0
+        [FieldOffset(192)] // size = 8, padding = 0
         public ecs_os_api_dlopen_t dlopen_;
 
-        [FieldOffset(224)] // size = 8, padding = 0
+        [FieldOffset(200)] // size = 8, padding = 0
         public ecs_os_api_dlproc_t dlproc_;
 
-        [FieldOffset(232)] // size = 8, padding = 0
+        [FieldOffset(208)] // size = 8, padding = 0
         public ecs_os_api_dlclose_t dlclose_;
 
-        [FieldOffset(240)] // size = 8, padding = 0
+        [FieldOffset(216)] // size = 8, padding = 0
         public ecs_os_api_module_to_path_t module_to_dl_;
 
-        [FieldOffset(248)] // size = 8, padding = 0
+        [FieldOffset(224)] // size = 8, padding = 0
         public ecs_os_api_module_to_path_t module_to_etc_;
+
+        [FieldOffset(232)] // size = 4, padding = 0
+        public int log_level_;
+
+        [FieldOffset(236)] // size = 4, padding = 0
+        public int log_indent_;
+
+        [FieldOffset(240)] // size = 1, padding = 7
+        public CBool log_with_color_;
     }
 
     // Struct @ os_api.h:44:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/os_api.h)
@@ -2095,7 +2091,7 @@ public static unsafe partial class flecs
         public ecs_on_set_t on_set;
     }
 
-    // Struct @ flecs.h:687:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:688:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 88, Pack = 8)]
     public struct ecs_world_info_t
     {
@@ -2151,7 +2147,7 @@ public static unsafe partial class flecs
         public int systems_ran_frame;
     }
 
-    // Struct @ flecs.h:393:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:394:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 312, Pack = 8)]
     public struct ecs_entity_desc_t
     {
@@ -2193,7 +2189,7 @@ public static unsafe partial class flecs
         public CString8U add_expr;
     }
 
-    // Struct @ flecs.h:418:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:419:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 288, Pack = 8)]
     public struct ecs_bulk_desc_t
     {
@@ -2226,7 +2222,7 @@ public static unsafe partial class flecs
         public ecs_table_t* table;
     }
 
-    // Struct @ flecs.h:426:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:427:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 328, Pack = 8)]
     public struct ecs_component_desc_t
     {
@@ -2240,7 +2236,7 @@ public static unsafe partial class flecs
         public ulong alignment;
     }
 
-    // Struct @ flecs.h:434:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:435:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 576, Pack = 8)]
     public struct ecs_type_desc_t
     {
@@ -2267,7 +2263,7 @@ public static unsafe partial class flecs
         public CString8U ids_expr;
     }
 
-    // Struct @ flecs.h:112:26 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:113:26 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
     public struct ecs_ref_t
     {
@@ -2293,7 +2289,7 @@ public static unsafe partial class flecs
         public void* ptr;
     }
 
-    // Struct @ flecs.h:109:27 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:110:27 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 2440, Pack = 8)]
     public struct ecs_iter_t
     {
@@ -2438,7 +2434,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ flecs.h:270:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:271:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 192, Pack = 8)]
     public struct ecs_term_t
     {
@@ -2473,7 +2469,7 @@ public static unsafe partial class flecs
         public CBool move;
     }
 
-    // Struct @ flecs.h:247:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:248:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
     public struct ecs_term_id_t
     {
@@ -2490,7 +2486,7 @@ public static unsafe partial class flecs
         public ecs_term_set_t set;
     }
 
-    // Struct @ flecs.h:94:29 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:95:29 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 1576, Pack = 8)]
     public struct ecs_filter_t
     {
@@ -2541,7 +2537,7 @@ public static unsafe partial class flecs
         public CString8U expr;
     }
 
-    // Struct @ flecs.h:458:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:459:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 3104, Pack = 8)]
     public struct ecs_filter_desc_t
     {
@@ -2577,7 +2573,7 @@ public static unsafe partial class flecs
         public CString8U name;
     }
 
-    // Struct @ flecs.h:503:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:504:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 3168, Pack = 8)]
     public struct ecs_query_desc_t
     {
@@ -2609,7 +2605,7 @@ public static unsafe partial class flecs
         public ecs_entity_t system;
     }
 
-    // Struct @ flecs.h:545:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:546:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 640, Pack = 8)]
     public struct ecs_trigger_desc_t
     {
@@ -2666,7 +2662,7 @@ public static unsafe partial class flecs
         public ecs_poly_t* observable;
     }
 
-    // Struct @ flecs.h:2863:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:2864:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 64, Pack = 8)]
     public struct ecs_event_desc_t
     {
@@ -2688,7 +2684,7 @@ public static unsafe partial class flecs
         [FieldOffset(56)] // size = 8, padding = 0
         public ecs_poly_t* observable;
 
-        // Union @ flecs.h:2848:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+        // Union @ flecs.h:2849:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
         [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
         public struct ecs_event_desc_t_payload
         {
@@ -2698,7 +2694,7 @@ public static unsafe partial class flecs
             [FieldOffset(0)] // size = 24, padding = 0
             public ecs_event_desc_t_payload_table table;
 
-            // Struct @ flecs.h:2850:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+            // Struct @ flecs.h:2851:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
             [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
             public struct ecs_event_desc_t_payload_table
             {
@@ -2717,7 +2713,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ flecs.h:579:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:580:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 3536, Pack = 8)]
     public struct ecs_observer_desc_t
     {
@@ -2924,7 +2920,7 @@ public static unsafe partial class flecs
         public void* lookup_ctx;
     }
 
-    // Struct @ meta.h:422:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:427:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 1080, Pack = 8)]
     public struct ecs_enum_desc_t
     {
@@ -2948,7 +2944,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ meta.h:435:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:440:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 1080, Pack = 8)]
     public struct ecs_bitmask_desc_t
     {
@@ -2972,7 +2968,7 @@ public static unsafe partial class flecs
         }
     }
 
-    // Struct @ meta.h:449:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:454:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 328, Pack = 8)]
     public struct ecs_array_desc_t
     {
@@ -2986,7 +2982,7 @@ public static unsafe partial class flecs
         public int count;
     }
 
-    // Struct @ meta.h:462:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:467:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 320, Pack = 8)]
     public struct ecs_vector_desc_t
     {
@@ -2997,7 +2993,7 @@ public static unsafe partial class flecs
         public ecs_entity_t type;
     }
 
-    // Struct @ meta.h:475:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
+    // Struct @ meta.h:480:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
     [StructLayout(LayoutKind.Explicit, Size = 1592, Pack = 8)]
     public struct ecs_struct_desc_t
     {
@@ -3023,7 +3019,7 @@ public static unsafe partial class flecs
 
     // Struct @ expr.h:117:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/expr.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
-    public struct ecs_expr_desc_t
+    public struct ecs_parse_expr_desc_t
     {
         [FieldOffset(0)] // size = 8, padding = 0
         public CString8U name;
@@ -3036,6 +3032,17 @@ public static unsafe partial class flecs
 
         [FieldOffset(24)] // size = 8, padding = 0
         public void* lookup_ctx;
+    }
+
+    // Struct @ json.h:28:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
+    public struct ecs_parse_json_desc_t
+    {
+        [FieldOffset(0)] // size = 8, padding = 0
+        public CString8U name;
+
+        [FieldOffset(8)] // size = 8, padding = 0
+        public CString8U expr;
     }
 
     // Struct @ stats.h:78:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/stats.h)
@@ -3530,7 +3537,7 @@ public static unsafe partial class flecs
         public int index;
     }
 
-    // Struct @ flecs.h:238:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:239:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
     public struct ecs_term_set_t
     {
@@ -3711,7 +3718,7 @@ public static unsafe partial class flecs
         public ecs_hashmap_t* members;
     }
 
-    // Struct @ flecs.h:600:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Struct @ flecs.h:601:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
     public struct EcsComponent
     {
@@ -3728,7 +3735,7 @@ public static unsafe partial class flecs
     {
     }
 
-    // OpaqueType @ flecs.h:88:28 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // OpaqueType @ flecs.h:89:28 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_world_t
     {
@@ -3740,13 +3747,19 @@ public static unsafe partial class flecs
     {
     }
 
-    // OpaqueType @ flecs.h:91:28 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // OpaqueType @ flecs.h:92:28 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_query_t
     {
     }
 
-    // OpaqueType @ flecs.h:97:27 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // OpaqueType @ flecs.h:76:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    [StructLayout(LayoutKind.Sequential)]
+    public struct ecs_poly_t
+    {
+    }
+
+    // OpaqueType @ flecs.h:98:27 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_rule_t
     {
@@ -3761,12 +3774,6 @@ public static unsafe partial class flecs
     // OpaqueType @ map.h:41:12 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/map.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ecs_bucket_t
-    {
-    }
-
-    // OpaqueType @ flecs.h:75:14 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
-    [StructLayout(LayoutKind.Sequential)]
-    public struct ecs_poly_t
     {
     }
 
@@ -3822,7 +3829,7 @@ public static unsafe partial class flecs
         public static implicit operator ecs_map_key_t(ulong data) => new() { Data = data };
     }
 
-    // Typedef @ flecs.h:82:18 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Typedef @ flecs.h:83:18 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 8)]
     public struct ecs_entity_t
     {
@@ -3833,7 +3840,7 @@ public static unsafe partial class flecs
         public static implicit operator ecs_entity_t(ecs_id_t data) => new() { Data = data };
     }
 
-    // Typedef @ flecs.h:85:29 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Typedef @ flecs.h:86:29 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 8)]
     public struct ecs_type_t
     {
@@ -3844,7 +3851,7 @@ public static unsafe partial class flecs
         public static implicit operator ecs_type_t(ecs_vector_t* data) => new() { Data = data };
     }
 
-    // Typedef @ flecs.h:79:18 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Typedef @ flecs.h:80:18 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 8)]
     public struct ecs_id_t
     {
@@ -3943,7 +3950,7 @@ public static unsafe partial class flecs
         EcsEntity = 17
     }
 
-    // Enum @ flecs.h:209:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Enum @ flecs.h:210:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public enum ecs_inout_kind_t : int
     {
         EcsInOutDefault = 0,
@@ -3952,7 +3959,7 @@ public static unsafe partial class flecs
         EcsOut = 3
     }
 
-    // Enum @ flecs.h:227:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Enum @ flecs.h:228:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public enum ecs_oper_kind_t : int
     {
         EcsAnd = 0,
@@ -3964,7 +3971,7 @@ public static unsafe partial class flecs
         EcsNotFrom = 6
     }
 
-    // Enum @ flecs.h:216:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Enum @ flecs.h:217:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public enum ecs_var_kind_t : int
     {
         EcsVarDefault = 0,
@@ -3972,7 +3979,7 @@ public static unsafe partial class flecs
         EcsVarIsVariable = 2
     }
 
-    // Enum @ flecs.h:2842:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // Enum @ flecs.h:2843:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public enum ecs_payload_kind_t : int
     {
         EcsPayloadNone = 0,
@@ -4142,37 +4149,37 @@ public static unsafe partial class flecs
     // MacroObjectLike @ api_defines.h:339:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_defines.h)
     public const int ECS_DESERIALIZE_FORMAT_ERROR = 80;
 
-    // MacroObjectLike @ log.h:20:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:279:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_BLACK = "\033[1;30m";
 
-    // MacroObjectLike @ log.h:21:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:280:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_RED = "\033[0;31m";
 
-    // MacroObjectLike @ log.h:22:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:281:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_GREEN = "\033[0;32m";
 
-    // MacroObjectLike @ log.h:23:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:282:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_YELLOW = "\033[0;33m";
 
-    // MacroObjectLike @ log.h:24:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:283:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_BLUE = "\033[0;34m";
 
-    // MacroObjectLike @ log.h:25:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:284:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_MAGENTA = "\033[0;35m";
 
-    // MacroObjectLike @ log.h:26:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:285:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_CYAN = "\033[0;36m";
 
-    // MacroObjectLike @ log.h:27:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:286:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_WHITE = "\033[1;37m";
 
-    // MacroObjectLike @ log.h:28:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:287:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_GREY = "\033[0;37m";
 
-    // MacroObjectLike @ log.h:29:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:288:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_NORMAL = "\033[0;49m";
 
-    // MacroObjectLike @ log.h:30:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/log.h)
+    // MacroObjectLike @ log.h:289:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_BOLD = "\033[1;49m";
 
     // MacroObjectLike @ strbuf.h:27:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/strbuf.h)
@@ -4181,40 +4188,40 @@ public static unsafe partial class flecs
     // MacroObjectLike @ strbuf.h:28:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/strbuf.h)
     public const int ECS_STRBUF_MAX_LIST_DEPTH = 32;
 
-    // MacroObjectLike @ flecs.h:123:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:124:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int ECS_MAX_ADD_REMOVE = 32;
 
-    // MacroObjectLike @ flecs.h:126:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:127:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int ECS_TERM_CACHE_SIZE = 8;
 
-    // MacroObjectLike @ flecs.h:129:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:130:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int ECS_TERM_DESC_CACHE_SIZE = 16;
 
-    // MacroObjectLike @ flecs.h:132:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:133:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int ECS_TRIGGER_DESC_EVENT_COUNT_MAX = 8;
 
-    // MacroObjectLike @ flecs.h:194:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:195:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsDefaultSet = 0;
 
-    // MacroObjectLike @ flecs.h:195:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:196:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsSelf = 1;
 
-    // MacroObjectLike @ flecs.h:196:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:197:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsSuperSet = 2;
 
-    // MacroObjectLike @ flecs.h:197:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:198:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsSubSet = 4;
 
-    // MacroObjectLike @ flecs.h:198:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:199:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsCascade = 8;
 
-    // MacroObjectLike @ flecs.h:199:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:200:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsAll = 16;
 
-    // MacroObjectLike @ flecs.h:200:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:201:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsParent = 32;
 
-    // MacroObjectLike @ flecs.h:201:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:202:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsNothing = 64;
 
     // MacroObjectLike @ api_support.h:24:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_support.h)
@@ -4229,13 +4236,13 @@ public static unsafe partial class flecs
     // MacroObjectLike @ api_support.h:38:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_support.h)
     public const int FLECS__E0 = 0;
 
-    // MacroObjectLike @ flecs.h:707:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:708:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const ulong ECS_ROLE = 1UL << 63;
 
-    // MacroObjectLike @ flecs.h:917:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:918:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsFirstUserComponentId = 32;
 
-    // MacroObjectLike @ flecs.h:921:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
+    // MacroObjectLike @ flecs.h:922:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs.h)
     public const int EcsFirstUserEntityId = ECS_HI_COMPONENT_ID + 128;
 
     // MacroObjectLike @ meta.h:71:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/meta.h)
