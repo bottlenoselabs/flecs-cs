@@ -1426,21 +1426,37 @@ public static unsafe partial class flecs
     [DllImport(LibraryName)]
     public static extern CString8U ecs_parse_json(ecs_world_t* world, CString8U ptr, ecs_entity_t type, void* data_out, ecs_parse_json_desc_t* desc);
 
-    // Function @ json.h:59:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:64:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    [DllImport(LibraryName)]
+    public static extern CString8U ecs_array_to_json(ecs_world_t* world, ecs_entity_t type, void* data, int count);
+
+    // Function @ json.h:81:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    [DllImport(LibraryName)]
+    public static extern int ecs_array_to_json_buf(ecs_world_t* world, ecs_entity_t type, void* data, int count, ecs_strbuf_t* buf_out);
+
+    // Function @ json.h:97:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_ptr_to_json(ecs_world_t* world, ecs_entity_t type, void* data);
 
-    // Function @ json.h:74:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:112:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern int ecs_ptr_to_json_buf(ecs_world_t* world, ecs_entity_t type, void* data, ecs_strbuf_t* buf_out);
 
-    // Function @ json.h:91:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:129:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern CString8U ecs_entity_to_json(ecs_world_t* world, ecs_entity_t entity);
 
-    // Function @ json.h:104:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    // Function @ json.h:142:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
     [DllImport(LibraryName)]
     public static extern int ecs_entity_to_json_buf(ecs_world_t* world, ecs_entity_t entity, ecs_strbuf_t* buf_out);
+
+    // Function @ json.h:166:7 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    [DllImport(LibraryName)]
+    public static extern CString8U ecs_iter_to_json(ecs_world_t* world, ecs_iter_t* iter, ecs_iter_to_json_desc_t* desc);
+
+    // Function @ json.h:180:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    [DllImport(LibraryName)]
+    public static extern int ecs_iter_to_json_buf(ecs_world_t* world, ecs_iter_t* iter, ecs_strbuf_t* buf_out, ecs_iter_to_json_desc_t* desc);
 
     // Function @ plecs.h:55:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/plecs.h)
     [DllImport(LibraryName)]
@@ -3062,6 +3078,29 @@ public static unsafe partial class flecs
 
         [FieldOffset(8)] // size = 8, padding = 0
         public CString8U expr;
+    }
+
+    // Struct @ json.h:155:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/json.h)
+    [StructLayout(LayoutKind.Explicit, Size = 6, Pack = 1)]
+    public struct ecs_iter_to_json_desc_t
+    {
+        [FieldOffset(0)] // size = 1, padding = 0
+        public CBool dont_serialize_term_ids;
+
+        [FieldOffset(1)] // size = 1, padding = 0
+        public CBool dont_serialize_ids;
+
+        [FieldOffset(2)] // size = 1, padding = 0
+        public CBool dont_serialize_variables;
+
+        [FieldOffset(3)] // size = 1, padding = 0
+        public CBool dont_serialize_is_set;
+
+        [FieldOffset(4)] // size = 1, padding = 0
+        public CBool dont_serialize_values;
+
+        [FieldOffset(5)] // size = 1, padding = 0
+        public CBool dont_serialize_entities;
     }
 
     // Struct @ stats.h:78:3 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/stats.h)
