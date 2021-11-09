@@ -18,7 +18,7 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 
 #### Bindgen
 
-If you wish to re-generate the bindings, simple run `./bindgen.sh` on macOS or Linux and `.\bindgen.cmd` on Windows.
+If you wish to re-generate the bindings, simple run `./bindgen.sh` on macOS or Linux. To run the same script on Windows, install Windows Subsystem for Linux with Ubuntu.
 
 ## Developers: Documentation
 
