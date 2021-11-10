@@ -44,29 +44,33 @@ public static unsafe partial class flecs
 
     // Function @ log.h:97:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
-    public static extern void _ecs_abort(int error_code, CString8U file, int line, CString8U fmt);
+    public static extern void _ecs_logv(int level, CString8U file, int line, CString8U fmt, nint args);
 
     // Function @ log.h:105:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
-    public static extern CBool _ecs_assert(CBool condition, int error_code, CString8U condition_str, CString8U file, int line, CString8U fmt);
+    public static extern void _ecs_abort(int error_code, CString8U file, int line, CString8U fmt);
 
-    // Function @ log.h:115:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // Function @ log.h:113:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
-    public static extern void _ecs_parser_error(CString8U name, CString8U expr, long column, CString8U fmt);
+    public static extern CBool _ecs_assert(CBool condition, int error_code, CString8U condition_str, CString8U file, int line, CString8U fmt);
 
     // Function @ log.h:123:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
+    public static extern void _ecs_parser_error(CString8U name, CString8U expr, long column, CString8U fmt);
+
+    // Function @ log.h:131:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    [DllImport(LibraryName)]
     public static extern void _ecs_parser_errorv(CString8U name, CString8U expr, long column, CString8U fmt, nint args);
 
-    // Function @ log.h:307:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // Function @ log.h:318:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern int ecs_log_set_level(int level);
 
-    // Function @ log.h:317:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // Function @ log.h:328:6 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern CBool ecs_log_enable_colors(CBool enabled);
 
-    // Function @ log.h:326:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // Function @ log.h:337:5 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     [DllImport(LibraryName)]
     public static extern int ecs_log_last_error();
 
@@ -4456,121 +4460,121 @@ public static unsafe partial class flecs
     // MacroDefinition @ api_defines.h:124:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/api_defines.h)
     public const ulong ECS_COMPONENT_MASK = ~ECS_ROLE_MASK;
 
-    // MacroDefinition @ log.h:333:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:344:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INVALID_OPERATION = 1;
 
-    // MacroDefinition @ log.h:334:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:345:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INVALID_PARAMETER = 2;
 
-    // MacroDefinition @ log.h:335:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:346:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_CONSTRAINT_VIOLATED = 3;
 
-    // MacroDefinition @ log.h:336:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:347:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_OUT_OF_MEMORY = 4;
 
-    // MacroDefinition @ log.h:337:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:348:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_OUT_OF_RANGE = 5;
 
-    // MacroDefinition @ log.h:338:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:349:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_UNSUPPORTED = 6;
 
-    // MacroDefinition @ log.h:339:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:350:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INTERNAL_ERROR = 7;
 
-    // MacroDefinition @ log.h:340:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:351:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_ALREADY_DEFINED = 8;
 
-    // MacroDefinition @ log.h:341:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:352:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_MISSING_OS_API = 9;
 
-    // MacroDefinition @ log.h:342:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:353:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_OPERATION_FAILED = 10;
 
-    // MacroDefinition @ log.h:344:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:355:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INCONSISTENT_NAME = 20;
 
-    // MacroDefinition @ log.h:345:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:356:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_NAME_IN_USE = 21;
 
-    // MacroDefinition @ log.h:346:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:357:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_NOT_A_COMPONENT = 22;
 
-    // MacroDefinition @ log.h:347:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:358:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INVALID_COMPONENT_SIZE = 23;
 
-    // MacroDefinition @ log.h:348:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:359:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INVALID_COMPONENT_ALIGNMENT = 24;
 
-    // MacroDefinition @ log.h:349:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:360:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_COMPONENT_NOT_REGISTERED = 25;
 
-    // MacroDefinition @ log.h:350:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:361:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INCONSISTENT_COMPONENT_ID = 26;
 
-    // MacroDefinition @ log.h:351:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:362:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INCONSISTENT_COMPONENT_ACTION = 27;
 
-    // MacroDefinition @ log.h:352:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:363:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_MODULE_UNDEFINED = 28;
 
-    // MacroDefinition @ log.h:354:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:365:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_COLUMN_ACCESS_VIOLATION = 40;
 
-    // MacroDefinition @ log.h:355:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:366:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_COLUMN_INDEX_OUT_OF_RANGE = 41;
 
-    // MacroDefinition @ log.h:356:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:367:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_COLUMN_IS_NOT_SHARED = 42;
 
-    // MacroDefinition @ log.h:357:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:368:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_COLUMN_IS_SHARED = 43;
 
-    // MacroDefinition @ log.h:358:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:369:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_COLUMN_TYPE_MISMATCH = 45;
 
-    // MacroDefinition @ log.h:360:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:371:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_TYPE_INVALID_CASE = 62;
 
-    // MacroDefinition @ log.h:362:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:373:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INVALID_WHILE_ITERATING = 70;
 
-    // MacroDefinition @ log.h:363:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:374:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_LOCKED_STORAGE = 71;
 
-    // MacroDefinition @ log.h:364:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:375:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const int ECS_INVALID_FROM_WORKER = 72;
 
-    // MacroDefinition @ log.h:371:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:382:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_BLACK = "\033[1;30m";
 
-    // MacroDefinition @ log.h:372:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:383:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_RED = "\033[0;31m";
 
-    // MacroDefinition @ log.h:373:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:384:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_GREEN = "\033[0;32m";
 
-    // MacroDefinition @ log.h:374:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:385:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_YELLOW = "\033[0;33m";
 
-    // MacroDefinition @ log.h:375:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:386:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_BLUE = "\033[0;34m";
 
-    // MacroDefinition @ log.h:376:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:387:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_MAGENTA = "\033[0;35m";
 
-    // MacroDefinition @ log.h:377:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:388:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_CYAN = "\033[0;36m";
 
-    // MacroDefinition @ log.h:378:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:389:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_WHITE = "\033[1;37m";
 
-    // MacroDefinition @ log.h:379:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:390:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_GREY = "\033[0;37m";
 
-    // MacroDefinition @ log.h:380:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:391:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_NORMAL = "\033[0;49m";
 
-    // MacroDefinition @ log.h:381:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
+    // MacroDefinition @ log.h:392:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/addons/log.h)
     public const string ECS_BOLD = "\033[1;49m";
 
     // MacroDefinition @ strbuf.h:27:9 (/home/runner/work/flecs-cs/flecs-cs/ext/flecs/include/flecs/private/strbuf.h)
