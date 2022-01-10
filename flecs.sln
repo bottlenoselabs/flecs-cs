@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs-01_hello_world", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Production", "Production", "{39423871-7923-4AFB-A756-35E17FCBA274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs-cs", "src\cs\production\flecs-cs\flecs-cs.csproj", "{5EB4443F-134E-43A0-9607-9F3504671E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs", "src\cs\production\flecs\flecs.csproj", "{5EB4443F-134E-43A0-9607-9F3504671E47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs.runtime.win-x64", "src\cs\production\flecs.runtime.win-x64\flecs.runtime.win-x64.csproj", "{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D}"
 EndProject
