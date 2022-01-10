@@ -2,8 +2,8 @@
 /.idea/
 
 # C# build artifacts
-/bin/
-/obj/
+bin/
+obj/
 
 # C# packages
 /nupkg/
