@@ -88,7 +88,11 @@ function build_flecs() {
     echo "Building flecs..."
     FLECS_BUILD_DIR="$DIR/cmake-build-release-flecs"
 
-    cmake -S $DIR/ext/flecs -B $FLECS_BUILD_DIR $CMAKE_ARCH_ARGS -DFLECS_BUILD_TESTS=OFF
+    cmake -S $DIR/ext/flecs -B $FLECS_BUILD_DIR $CMAKE_ARCH_ARGS \
+        `#Change output directories` \
+        -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$FLECS_BUILD_DIR \
+        `# project specific` \
+        -DFLECS_STATIC_LIBS=OFF
     cmake --build $FLECS_BUILD_DIR --config Release
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
