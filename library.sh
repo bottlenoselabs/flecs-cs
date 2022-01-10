@@ -98,7 +98,7 @@ function build_flecs() {
         FLECS_LIBRARY_FILENAME="libflecs.dylib"
         FLECS_LIBRARY_FILE_PATH_BUILD="$(perl -MCwd -e 'print Cwd::abs_path shift' $FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME)"
     elif [[ "$TARGET_BUILD_OS" == "windows" ]]; then
-        FLECS_LIBRARY_FILENAME="libflecs.dll"
+        FLECS_LIBRARY_FILENAME="flecs.dll"
         FLECS_LIBRARY_FILE_PATH_BUILD="$FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME"
     fi
     FLECS_LIBRARY_FILE_PATH="$LIB_DIR/$FLECS_LIBRARY_FILENAME"
