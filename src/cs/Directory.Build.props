@@ -5,13 +5,13 @@
         <NoWarn>$(NoWarn);CA1303;CA1707</NoWarn>
     </PropertyGroup>
 
-    <!-- bottlenoselabs.MSBuild settings -->
+    <!-- bottlenoselabs.MSBuild.Tools settings -->
     <PropertyGroup>
         <EnableAnalyzers>true</EnableAnalyzers>
         <EnableAnalyzersStyleCop>true</EnableAnalyzersStyleCop>
     </PropertyGroup>
 
-    <!-- bottlenoselabs.MSBuild -->
+    <!-- bottlenoselabs.MSBuild.Tools -->
     <ItemGroup>
         <PackageReference Include="bottlenoselabs.MSBuild.Tools" Version="0.1.132">
             <PrivateAssets>all</PrivateAssets>
