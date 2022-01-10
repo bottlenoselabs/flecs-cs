@@ -5,7 +5,9 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using C2CS;
+using static bottlenoselabs.flecs.Runtime;
+
+namespace bottlenoselabs;
 
 [SuppressMessage("ReSharper", "SA1300", Justification = "C style.")]
 [SuppressMessage("ReSharper", "InconsistentNaming", Justification = "C style.")]
@@ -14,14 +16,14 @@ public static unsafe partial class flecs
 {
     public static ecs_world_t* ecs_init_w_args(ReadOnlySpan<string> args)
     {
-        var argv = Runtime.CString8UArray(args);
+        var argv = CStrings.CStringArray(args);
         var world = ecs_init_w_args(args.Length, argv);
-        Runtime.FreeCStrings(argv, args.Length);
+        Runtime.CStrings.FreeCStrings(argv, args.Length);
         return world;
     }
 
     public static ecs_entity_t ecs_entity_init(
-        ecs_world_t* world, CString8U name, Span<ecs_id_t> componentIds)
+        ecs_world_t* world, CString name, Span<ecs_id_t> componentIds)
     {
         var entityDescriptor = new ecs_entity_desc_t
         {
@@ -54,7 +56,7 @@ public static unsafe partial class flecs
     {
         var componentType = typeof(TComponent);
         var componentName = componentType.Name;
-        var componentNameC = Runtime.CString8U(componentName);
+        var componentNameC = CStrings.String(componentName);
         var structLayoutAttribute = componentType.StructLayoutAttribute;
         CheckStructLayout(structLayoutAttribute);
         var structAlignment = structLayoutAttribute!.Pack;

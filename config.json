@@ -1,0 +1,9 @@
+{
+    "inputFilePath": "ext/flecs/include/flecs.h",
+    "outputFilePath": "./src/cs/production/flecs-cs/flecs.cs",
+    "namespaceName": "bottlenoselabs",
+    "machineBitWidth": 64,
+    "ignoredTypeNames": [
+      "FLECS_FLOAT"
+    ]
+  }

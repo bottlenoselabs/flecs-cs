@@ -3,8 +3,8 @@
 
 using System;
 using System.Runtime.InteropServices;
-using C2CS;
-using static flecs;
+using static bottlenoselabs.flecs;
+using static bottlenoselabs.flecs.Runtime;
 
 internal static unsafe class Program
 {
@@ -51,6 +51,6 @@ internal static unsafe class Program
 
     private static class Entities
     {
-        public static readonly CString8U MyEntity = "MyEntity";
+        public static readonly CString MyEntity = "MyEntity";
     }
 }

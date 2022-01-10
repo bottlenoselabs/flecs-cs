@@ -1,13 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+    <!-- MSBuild settings -->
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
+    <!-- C# project references -->
     <ItemGroup>
       <ProjectReference Include="../../production/flecs-cs/flecs-cs.csproj" />
+      <ProjectReference Include="..\..\production\flecs.runtime.linux-x64\flecs.runtime.linux-x64.csproj" />
+      <ProjectReference Include="..\..\production\flecs.runtime.osx\flecs.runtime.osx.csproj" />
+      <ProjectReference Include="..\..\production\flecs.runtime.win-x64\flecs.runtime.win-x64.csproj" />
     </ItemGroup>
 
 </Project>

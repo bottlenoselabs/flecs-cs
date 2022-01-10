@@ -1,11 +1,5 @@
 <Project>
 
-    <Import Project="../Common.props" />
-
-    <!-- My-MSBuild project settings -->
-    <PropertyGroup>
-        <EnableAnalyzers>true</EnableAnalyzers>
-        <EnableAnalyzersStyleCop>true</EnableAnalyzersStyleCop>
-    </PropertyGroup>
+    <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
 
 </Project>

@@ -1,0 +1,45 @@
+<Project>
+  
+  <PropertyGroup>
+    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/flecs.cs')" >false</_IsNuGetPackage>
+    <_IsNuGetPackage Condition=" Exists('$(MSBuildThisFileDirectory)/../content/flecs.cs') ">true</_IsNuGetPackage>
+    
+    <BottlenoseLabsUvDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsUvDirectoryPath>
+    <BottlenoseLabsUvDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/..'))</BottlenoseLabsUvDirectoryPath>
+    <BottlenoseLabsUvContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'false' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</BottlenoseLabsUvContentDirectoryPath>
+    <BottlenoseLabsUvContentDirectoryPath Condition=" $(_IsNuGetPackage) == 'true' ">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../content'))</BottlenoseLabsUvContentDirectoryPath>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" $(_IsNuGetPackage) == 'true' ">
+    
+    <Compile Include="$(BottlenoseLabsUvContentDirectoryPath)/**/*.cs" >
+      <Pack>false</Pack>
+      <Link>bottlenoselabs/flecs/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Compile>
+    <Compile Remove="$(BottlenoseLabsUvContentDirectoryPath)/obj/**/*.cs" />
+    <Compile Remove="$(BottlenoseLabsUvContentDirectoryPath)/bin/**/*.cs" />
+    
+  </ItemGroup>
+  
+  <ItemGroup Condition=" $(_IsNuGetPackage) == 'false' ">
+    
+    <Content Include="$(BottlenoseLabsUvContentDirectoryPath)/**/*.cs" >
+      <Pack>true</Pack>
+      <PackagePath>content/</PackagePath>
+      <Link>bottlenoselabs/flecs/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Remove="$(BottlenoseLabsUvContentDirectoryPath)/obj/**/*.cs" />
+    <Content Remove="$(BottlenoseLabsUvContentDirectoryPath)/bin/**/*.cs" />
+    
+    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.flecs.props">
+      <PackagePath>build/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)/bottlenoselabs.flecs.targets">
+      <PackagePath>build/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </None>
+    
+  </ItemGroup>
+
+</Project>

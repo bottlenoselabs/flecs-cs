@@ -4,34 +4,22 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <RootNamespace />
+        <RootNamespace>bottlenoselabs</RootNamespace>
     </PropertyGroup>
 
-    <!-- NuGet package references -->
-    <ItemGroup>
-      <PackageReference Include="C2CS.Runtime" Version="*-*" />
-    </ItemGroup>
+    <!-- NuGet -->
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <RepositoryUrl>https://github.com/bottlenoselabs/flecs-cs</RepositoryUrl>
+        <PackageDescription>C# bindings for felcs. This package only includes C# code; it does not include any native library.</PackageDescription>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <IncludeSymbols>false</IncludeSymbols>
+        <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+        <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+        <DevelopmentDependency>true</DevelopmentDependency>
+    </PropertyGroup>
 
-    <!-- Dynamic link libraries -->
-    <ItemGroup>
-        <Content Include="$(GitRepositoryPath)lib/*.dll" Condition="'$(IsWindows)' == 'true'">
-            <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/$(RuntimeIdentifier)\native\%(Filename)%(Extension)</PackagePath>
-            <Pack>true</Pack>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="$(GitRepositoryPath)lib/*.dylib" Condition="'$(IsMacOS)' == 'true'">
-            <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
-            <Pack>true</Pack>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-        <Content Include="$(GitRepositoryPath)lib/*.so" Condition="'$(IsLinux)' == 'true'">
-            <Link>%(Filename)%(Extension)</Link>
-            <PackagePath>runtimes/$(RuntimeIdentifier)/native/%(Filename)%(Extension)</PackagePath>
-            <Pack>true</Pack>
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+    <Import Project="$(MSBuildThisFileDirectory)/bottlenoselabs.flecs.props" />
 
 </Project>
