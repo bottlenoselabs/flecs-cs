@@ -9,7 +9,7 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 1. Download and install [.NET 6](https://dotnet.microsoft.com/download).
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/flecs-cs`.
 
-3. Build the native library by running `library.sh`. (Use Git BASH on Windows https://git-scm.com/download/win).
+3. Build the native library by running `library.sh`. (Use Git BASH on Windows https://git-scm.com/download/win). Requires C/C++ toolchain and CMake to be installed.
 4. Add the C# project `./src/cs/production/flecs-cs/flecs-cs.csproj` to your solution:
 ```xml
 <ItemGroup>
