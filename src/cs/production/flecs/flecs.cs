@@ -1664,55 +1664,55 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern int ecs_plecs_from_file(ecs_world_t* world, CString filename);
 
-        // Function @ rules.h:25:13 (flecs/addons/rules.h)
+        // Function @ rules.h:75:13 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern ecs_rule_t* ecs_rule_init(ecs_world_t* world, ecs_filter_desc_t* desc);
 
-        // Function @ rules.h:30:6 (flecs/addons/rules.h)
+        // Function @ rules.h:84:6 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern void ecs_rule_fini(ecs_rule_t* rule);
 
-        // Function @ rules.h:34:21 (flecs/addons/rules.h)
+        // Function @ rules.h:94:21 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
-        public static extern ecs_filter_t* ecs_rule_filter(ecs_rule_t* rule);
+        public static extern ecs_filter_t* ecs_rule_get_filter(ecs_rule_t* rule);
 
-        // Function @ rules.h:38:9 (flecs/addons/rules.h)
+        // Function @ rules.h:103:9 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern int ecs_rule_var_count(ecs_rule_t* rule);
 
-        // Function @ rules.h:42:9 (flecs/addons/rules.h)
+        // Function @ rules.h:115:9 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern int ecs_rule_find_var(ecs_rule_t* rule, CString name);
 
-        // Function @ rules.h:47:13 (flecs/addons/rules.h)
+        // Function @ rules.h:126:13 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern CString ecs_rule_var_name(ecs_rule_t* rule, int var_id);
 
-        // Function @ rules.h:52:6 (flecs/addons/rules.h)
+        // Function @ rules.h:162:6 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern void ecs_rule_set_var(ecs_iter_t* it, int var_id, ecs_entity_t value);
 
-        // Function @ rules.h:58:14 (flecs/addons/rules.h)
+        // Function @ rules.h:179:14 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_rule_get_var(ecs_iter_t* it, int var_id);
 
-        // Function @ rules.h:63:6 (flecs/addons/rules.h)
+        // Function @ rules.h:193:6 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_rule_var_is_entity(ecs_rule_t* rule, int var_id);
 
-        // Function @ rules.h:68:12 (flecs/addons/rules.h)
+        // Function @ rules.h:208:12 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern ecs_iter_t ecs_rule_iter(ecs_world_t* world, ecs_rule_t* rule);
 
-        // Function @ rules.h:73:6 (flecs/addons/rules.h)
-        [DllImport(LibraryName)]
-        public static extern void ecs_rule_iter_free(ecs_iter_t* iter);
-
-        // Function @ rules.h:77:6 (flecs/addons/rules.h)
+        // Function @ rules.h:217:6 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_rule_next(ecs_iter_t* it);
 
-        // Function @ rules.h:81:7 (flecs/addons/rules.h)
+        // Function @ rules.h:226:6 (flecs/addons/rules.h)
+        [DllImport(LibraryName)]
+        public static extern CBool ecs_rule_next_instanced(ecs_iter_t* it);
+
+        // Function @ rules.h:239:7 (flecs/addons/rules.h)
         [DllImport(LibraryName)]
         public static extern CString ecs_rule_str(ecs_rule_t* rule);
 
