@@ -89,7 +89,9 @@ function build_flecs() {
     FLECS_BUILD_DIR="$DIR/cmake-build-release-flecs"
 
     cmake -S $DIR/ext/flecs -B $FLECS_BUILD_DIR $CMAKE_ARCH_ARGS \
-        `#Change output directories` \
+        `# always prefix with "lib"` \
+        -DCMAKE_STATIC_LIBRARY_PREFIX "lib" \
+        `# change output directories` \
         -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$FLECS_BUILD_DIR \
         `# project specific` \
         -DFLECS_STATIC_LIBS=OFF
@@ -102,7 +104,7 @@ function build_flecs() {
         FLECS_LIBRARY_FILENAME="libflecs.dylib"
         FLECS_LIBRARY_FILE_PATH_BUILD="$(perl -MCwd -e 'print Cwd::abs_path shift' $FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME)"
     elif [[ "$TARGET_BUILD_OS" == "windows" ]]; then
-        FLECS_LIBRARY_FILENAME="flecs.dll"
+        FLECS_LIBRARY_FILENAME="libflecs.dll"
         FLECS_LIBRARY_FILE_PATH_BUILD="$FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME"
     fi
     FLECS_LIBRARY_FILE_PATH="$LIB_DIR/$FLECS_LIBRARY_FILENAME"
