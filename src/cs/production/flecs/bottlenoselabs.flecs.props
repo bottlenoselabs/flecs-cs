@@ -12,6 +12,12 @@
   </PropertyGroup>
 
   <ItemGroup Condition="$(_IsNuGetPackage) == 'true'">
+
+    <!-- bottlenoselabs.MSBuild.Tools -->
+    <PackageReference Include="bottlenoselabs.MSBuild.Tools" Version="0.1.132">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     
     <Compile Include="$(_ContentDirectoryPath)/**/*.cs" >
       <Pack>false</Pack>
@@ -24,11 +30,11 @@
   
   <ItemGroup Condition="$(_IsNuGetPackage) == 'false'">
     
-    <Content Include="$(_ContentDirectoryPath)/**/*.cs" >
+    <!-- <Content Include="$(_ContentDirectoryPath)/**/*.cs" >
       <Pack>true</Pack>
       <PackagePath>content/</PackagePath>
       <Link>bottlenoselabs/$(_LibraryName)/%(RecursiveDir)%(Filename)%(Extension)</Link>
-    </Content>
+    </Content> -->
     <Content Remove="$(_ContentDirectoryPath)/obj/**/*.cs" />
     <Content Remove="$(_ContentDirectoryPath)/bin/**/*.cs" />
     
