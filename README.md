@@ -12,7 +12,7 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 3. Build the native library by running `library.sh`. (Use Git BASH on Windows https://git-scm.com/download/win). Requires C/C++ toolchain and CMake to be installed.
 4. Import the MSBuild `flecs.props` file which is located in the root of this directory to your `.csproj` file to setup everything you need. See the [hello world sample](src\cs\samples\flecs-01_hello_world\flecs-01_hello_world.csproj) for an example of how to do this.
 ```xml
-<!-- C# project references -->
+<!-- flecs: bindings + native library -->
 <Import Project="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/path/to/flecs.props'))" />
 ```
 
