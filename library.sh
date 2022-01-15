@@ -94,7 +94,9 @@ function build_flecs() {
         -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$FLECS_BUILD_DIR \
         `# project specific` \
         -DFLECS_STATIC_LIBS=OFF
+    exit_if_last_command_failed
     cmake --build $FLECS_BUILD_DIR --config Release
+    exit_if_last_command_failed
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
         FLECS_LIBRARY_FILENAME="libflecs.so"
