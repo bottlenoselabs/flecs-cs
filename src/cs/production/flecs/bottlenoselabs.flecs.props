@@ -29,12 +29,11 @@
   </ItemGroup>
   
   <ItemGroup Condition="$(_IsNuGetPackage) == 'false'">
-    
-    <!-- <Content Include="$(_ContentDirectoryPath)/**/*.cs" >
+    <Content Include="$(_ContentDirectoryPath)/**/*.cs" >
       <Pack>true</Pack>
       <PackagePath>content/</PackagePath>
       <Link>bottlenoselabs/$(_LibraryName)/%(RecursiveDir)%(Filename)%(Extension)</Link>
-    </Content> -->
+    </Content>
     <Content Remove="$(_ContentDirectoryPath)/obj/**/*.cs" />
     <Content Remove="$(_ContentDirectoryPath)/bin/**/*.cs" />
     
