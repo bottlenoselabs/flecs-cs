@@ -1,9 +1,0 @@
-mode: ContinuousDeployment
-tag-prefix: "[vV]"
-branches:
-  main:
-    regex: "^master$"
-    tag: 'commit'
-ignore:
-  sha: []
-merge-message-formats: {}
