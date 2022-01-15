@@ -10,10 +10,13 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/flecs-cs`.
 
 3. Build the native library by running `library.sh`. (Use Git BASH on Windows https://git-scm.com/download/win). Requires C/C++ toolchain and CMake to be installed.
-4. Add the C# project `./src/cs/production/flecs/flecs.csproj` to your solution:
+4. Add the C# project `./src/cs/production/flecs/flecs.csproj` to your solution along with the runtime projects for the native library.
 ```xml
 <ItemGroup>
     <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.csproj" />
+    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.runtime.win-x64.csproj" />
+    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.runtime.osx.csproj" />
+    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.runtime.linux-x64.csproj" />
 </ItemGroup>
 ```
 
