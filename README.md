@@ -10,27 +10,15 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/flecs-cs`.
 
 3. Build the native library by running `library.sh`. (Use Git BASH on Windows https://git-scm.com/download/win). Requires C/C++ toolchain and CMake to be installed.
-4. Add the C# project `./src/cs/production/flecs/flecs.csproj` to your solution along with the runtime projects for the native library.
+4. Import the MSBuild `flecs.props` file which is located in the root of this directory to your `.csproj` file to setup everything you need. See the [hello world sample](src\cs\samples\flecs-01_hello_world\flecs-01_hello_world.csproj) for an example of how to do this.
 ```xml
-<ItemGroup>
-    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.csproj" />
-    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.runtime.win-x64.csproj" />
-    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.runtime.osx.csproj" />
-    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.runtime.linux-x64.csproj" />
-</ItemGroup>
+<!-- C# project references -->
+<Import Project="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/path/to/flecs.props'))" />
 ```
 
 #### Bindgen
 
 If you wish to re-generate the bindings, run [`c2cs`](https://github.com/lithiumtoast/c2cs) from this directory.
-
-### NuGet packages
-
-1. Install the `bottlenoselabs.flecs` NuGet package. This package contains only the C# bindings. To get the pre-release development packages, use the NuGet package feed: `https://www.myget.org/F/bottlenoselabs/api/v3/index.json`.
-2. Install one of the following packages which contain the native library for the runtime identifier. More than one these packages can be installed at once if desired but is not strictly required and will waste disk space unnecessarily. 
-   -  `bottlenoselabs.flecs.runtime.win-x64`: The `flecs.dll` native binary for Windows (64-bit).
-   -  `bottlenoselabs.flecs.runtime.osx`: The `libflecs.dylib` for macOS Intel (`osx-x64`) + macOS Apple Silicon (`osx-arm64`).
-   -  `bottlenoselabs.flecs.runtime.linux-x64`: The `libflecs.so` for Linux x64.
 
 ## Developers: Documentation
 

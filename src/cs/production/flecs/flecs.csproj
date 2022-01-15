@@ -5,6 +5,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <RootNamespace>bottlenoselabs</RootNamespace>
+        <AssemblyName>bottlenoselabs.flecs</AssemblyName>
     </PropertyGroup>
 
     <!-- NuGet -->

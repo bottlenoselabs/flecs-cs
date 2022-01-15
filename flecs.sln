@@ -8,12 +8,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Production", "Production", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs", "src\cs\production\flecs\flecs.csproj", "{5EB4443F-134E-43A0-9607-9F3504671E47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs.runtime.win-x64", "src\cs\production\flecs.runtime.win-x64\flecs.runtime.win-x64.csproj", "{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs.runtime.osx", "src\cs\production\flecs.runtime.osx\flecs.runtime.osx.csproj", "{8B68D691-995C-49A2-92B7-A00CFACC6606}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flecs.runtime.linux-x64", "src\cs\production\flecs.runtime.linux-x64\flecs.runtime.linux-x64.csproj", "{E05D7996-6CB2-4488-8E72-36CF087017F7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,24 +22,9 @@ Global
 		{5EB4443F-134E-43A0-9607-9F3504671E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EB4443F-134E-43A0-9607-9F3504671E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EB4443F-134E-43A0-9607-9F3504671E47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B68D691-995C-49A2-92B7-A00CFACC6606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B68D691-995C-49A2-92B7-A00CFACC6606}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B68D691-995C-49A2-92B7-A00CFACC6606}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B68D691-995C-49A2-92B7-A00CFACC6606}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E05D7996-6CB2-4488-8E72-36CF087017F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E05D7996-6CB2-4488-8E72-36CF087017F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E05D7996-6CB2-4488-8E72-36CF087017F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E05D7996-6CB2-4488-8E72-36CF087017F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A3C2CCD0-3D6E-4356-916D-B67E220646F7} = {9E1476CE-E22E-44FD-ABC4-93625DDBBA99}
 		{5EB4443F-134E-43A0-9607-9F3504671E47} = {39423871-7923-4AFB-A756-35E17FCBA274}
-		{08AEED8F-8FF7-4AA3-AF2F-C65E473F815D} = {39423871-7923-4AFB-A756-35E17FCBA274}
-		{8B68D691-995C-49A2-92B7-A00CFACC6606} = {39423871-7923-4AFB-A756-35E17FCBA274}
-		{E05D7996-6CB2-4488-8E72-36CF087017F7} = {39423871-7923-4AFB-A756-35E17FCBA274}
 	EndGlobalSection
 EndGlobal

@@ -8,11 +8,6 @@
     </PropertyGroup>
 
     <!-- C# project references -->
-    <ItemGroup>
-      <ProjectReference Include="..\..\production\flecs\flecs.csproj" />
-      <ProjectReference Include="..\..\production\flecs.runtime.linux-x64\flecs.runtime.linux-x64.csproj" />
-      <ProjectReference Include="..\..\production\flecs.runtime.osx\flecs.runtime.osx.csproj" />
-      <ProjectReference Include="..\..\production\flecs.runtime.win-x64\flecs.runtime.win-x64.csproj" />
-    </ItemGroup>
+    <Import Project="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)/../../../../flecs.props'))" />
 
 </Project>
