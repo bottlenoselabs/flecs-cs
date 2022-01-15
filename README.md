@@ -13,7 +13,7 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 4. Add the C# project `./src/cs/production/flecs/flecs.csproj` to your solution:
 ```xml
 <ItemGroup>
-    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs-cs/flecs-cs.csproj" />
+    <ProjectReference Include="path/to/flecs-cs/src/cs/production/flecs/flecs.csproj" />
 </ItemGroup>
 ```
 
