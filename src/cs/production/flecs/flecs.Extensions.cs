@@ -1,6 +1,8 @@
 // Copyright (c) Bottlenose Labs Inc. (https://github.com/bottlenoselabs). All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the Git repository root directory for full license information.
 
+#nullable enable
+
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -10,9 +12,7 @@ namespace bottlenoselabs
 {
     public static unsafe partial class flecs
     {
-#pragma warning disable CA1707
         public static ecs_world_t* ecs_init_w_args(ReadOnlySpan<string> args)
-#pragma warning restore CA1707
         {
             var argv = CStrings.CStringArray(args);
             var world = ecs_init_w_args(args.Length, argv);

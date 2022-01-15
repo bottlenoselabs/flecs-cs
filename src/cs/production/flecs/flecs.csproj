@@ -5,22 +5,6 @@
         <TargetFramework>net6.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <RootNamespace>bottlenoselabs</RootNamespace>
-        <AssemblyName>bottlenoselabs.flecs</AssemblyName>
     </PropertyGroup>
-
-    <!-- NuGet -->
-    <PropertyGroup>
-        <IsPackable>true</IsPackable>
-        <RepositoryUrl>https://github.com/bottlenoselabs/flecs-cs</RepositoryUrl>
-        <PackageDescription>C# bindings for felcs. This package only includes C# code; it does not include any native library.</PackageDescription>
-        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
-        <IncludeSymbols>false</IncludeSymbols>
-        <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
-        <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
-        <DevelopmentDependency>true</DevelopmentDependency>
-    </PropertyGroup>
-
-    <Import Project="$(MSBuildThisFileDirectory)/bottlenoselabs.flecs.props" />
 
 </Project>
