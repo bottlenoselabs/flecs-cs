@@ -90,7 +90,7 @@ function build_flecs() {
 
     cmake -S $DIR/ext/flecs -B $FLECS_BUILD_DIR $CMAKE_ARCH_ARGS \
         `# always prefix with "lib"` \
-        -DCMAKE_STATIC_LIBRARY_PREFIX="lib" \
+        -DCMAKE_SHARED_LIBRARY_PREFIX="lib" \
         `# change output directories` \
         -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$FLECS_BUILD_DIR \
         `# project specific` \
