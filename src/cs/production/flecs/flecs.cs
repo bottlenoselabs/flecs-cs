@@ -1548,9 +1548,9 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern int ecs_meta_pop(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:354:5 (flecs/addons/meta.h)
+        // Function @ meta.h:354:6 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
-        public static extern int ecs_meta_is_collection(ecs_meta_cursor_t* cursor);
+        public static extern CBool ecs_meta_is_collection(ecs_meta_cursor_t* cursor);
 
         // Function @ meta.h:359:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
@@ -4876,64 +4876,67 @@ namespace bottlenoselabs
         // MacroDefinition @ log.h:364:9 (flecs/addons/log.h)
         public const int ECS_MODULE_UNDEFINED = 28;
 
-        // MacroDefinition @ log.h:366:9 (flecs/addons/log.h)
-        public const int ECS_COLUMN_ACCESS_VIOLATION = 40;
+        // MacroDefinition @ log.h:365:9 (flecs/addons/log.h)
+        public const int ECS_MISSING_SYMBOL = 29;
 
         // MacroDefinition @ log.h:367:9 (flecs/addons/log.h)
-        public const int ECS_COLUMN_INDEX_OUT_OF_RANGE = 41;
+        public const int ECS_COLUMN_ACCESS_VIOLATION = 40;
 
         // MacroDefinition @ log.h:368:9 (flecs/addons/log.h)
-        public const int ECS_COLUMN_IS_NOT_SHARED = 42;
+        public const int ECS_COLUMN_INDEX_OUT_OF_RANGE = 41;
 
         // MacroDefinition @ log.h:369:9 (flecs/addons/log.h)
-        public const int ECS_COLUMN_IS_SHARED = 43;
+        public const int ECS_COLUMN_IS_NOT_SHARED = 42;
 
         // MacroDefinition @ log.h:370:9 (flecs/addons/log.h)
+        public const int ECS_COLUMN_IS_SHARED = 43;
+
+        // MacroDefinition @ log.h:371:9 (flecs/addons/log.h)
         public const int ECS_COLUMN_TYPE_MISMATCH = 45;
 
-        // MacroDefinition @ log.h:372:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:373:9 (flecs/addons/log.h)
         public const int ECS_TYPE_INVALID_CASE = 62;
 
-        // MacroDefinition @ log.h:374:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:375:9 (flecs/addons/log.h)
         public const int ECS_INVALID_WHILE_ITERATING = 70;
 
-        // MacroDefinition @ log.h:375:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:376:9 (flecs/addons/log.h)
         public const int ECS_LOCKED_STORAGE = 71;
 
-        // MacroDefinition @ log.h:376:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:377:9 (flecs/addons/log.h)
         public const int ECS_INVALID_FROM_WORKER = 72;
 
-        // MacroDefinition @ log.h:383:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:384:9 (flecs/addons/log.h)
         public const string ECS_BLACK = "\033[1;30m";
 
-        // MacroDefinition @ log.h:384:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:385:9 (flecs/addons/log.h)
         public const string ECS_RED = "\033[0;31m";
 
-        // MacroDefinition @ log.h:385:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:386:9 (flecs/addons/log.h)
         public const string ECS_GREEN = "\033[0;32m";
 
-        // MacroDefinition @ log.h:386:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:387:9 (flecs/addons/log.h)
         public const string ECS_YELLOW = "\033[0;33m";
 
-        // MacroDefinition @ log.h:387:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:388:9 (flecs/addons/log.h)
         public const string ECS_BLUE = "\033[0;34m";
 
-        // MacroDefinition @ log.h:388:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:389:9 (flecs/addons/log.h)
         public const string ECS_MAGENTA = "\033[0;35m";
 
-        // MacroDefinition @ log.h:389:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:390:9 (flecs/addons/log.h)
         public const string ECS_CYAN = "\033[0;36m";
 
-        // MacroDefinition @ log.h:390:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:391:9 (flecs/addons/log.h)
         public const string ECS_WHITE = "\033[1;37m";
 
-        // MacroDefinition @ log.h:391:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:392:9 (flecs/addons/log.h)
         public const string ECS_GREY = "\033[0;37m";
 
-        // MacroDefinition @ log.h:392:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:393:9 (flecs/addons/log.h)
         public const string ECS_NORMAL = "\033[0;49m";
 
-        // MacroDefinition @ log.h:393:9 (flecs/addons/log.h)
+        // MacroDefinition @ log.h:394:9 (flecs/addons/log.h)
         public const string ECS_BOLD = "\033[1;49m";
 
         // MacroDefinition @ strbuf.h:27:9 (flecs/private/strbuf.h)
