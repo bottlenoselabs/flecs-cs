@@ -76,115 +76,115 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern int ecs_log_last_error();
 
-        // Function @ vector.h:98:15 (flecs/private/vector.h)
+        // Function @ vector.h:96:15 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern ecs_vector_t* _ecs_vector_new(ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:111:15 (flecs/private/vector.h)
+        // Function @ vector.h:109:15 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern ecs_vector_t* _ecs_vector_from_array(ecs_size_t elem_size, short offset, int elem_count, void* array);
 
-        // Function @ vector.h:122:6 (flecs/private/vector.h)
+        // Function @ vector.h:120:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void _ecs_vector_zero(ecs_vector_t* vector, ecs_size_t elem_size, short offset);
 
-        // Function @ vector.h:132:6 (flecs/private/vector.h)
+        // Function @ vector.h:130:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void ecs_vector_free(ecs_vector_t* vector);
 
-        // Function @ vector.h:137:6 (flecs/private/vector.h)
+        // Function @ vector.h:135:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void ecs_vector_clear(ecs_vector_t* vector);
 
-        // Function @ vector.h:142:6 (flecs/private/vector.h)
+        // Function @ vector.h:140:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void ecs_vector_assert_size(ecs_vector_t* vector_inout, ecs_size_t elem_size);
 
-        // Function @ vector.h:148:6 (flecs/private/vector.h)
+        // Function @ vector.h:146:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void ecs_vector_assert_alignment(ecs_vector_t* vector, ecs_size_t elem_alignment);
 
-        // Function @ vector.h:154:7 (flecs/private/vector.h)
+        // Function @ vector.h:152:7 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void* _ecs_vector_add(ecs_vector_t** array_inout, ecs_size_t elem_size, short offset);
 
-        // Function @ vector.h:167:7 (flecs/private/vector.h)
+        // Function @ vector.h:165:7 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void* _ecs_vector_insert_at(ecs_vector_t** array_inout, ecs_size_t elem_size, short offset, int index);
 
-        // Function @ vector.h:181:7 (flecs/private/vector.h)
+        // Function @ vector.h:179:7 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void* _ecs_vector_addn(ecs_vector_t** array_inout, ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:195:7 (flecs/private/vector.h)
+        // Function @ vector.h:193:7 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void* _ecs_vector_get(ecs_vector_t* vector, ecs_size_t elem_size, short offset, int index);
 
-        // Function @ vector.h:209:7 (flecs/private/vector.h)
+        // Function @ vector.h:207:7 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void* _ecs_vector_last(ecs_vector_t* vector, ecs_size_t elem_size, short offset);
 
-        // Function @ vector.h:223:9 (flecs/private/vector.h)
+        // Function @ vector.h:221:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_set_min_size(ecs_vector_t** array_inout, ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:235:9 (flecs/private/vector.h)
+        // Function @ vector.h:233:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_set_min_count(ecs_vector_t** vector_inout, ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:249:6 (flecs/private/vector.h)
+        // Function @ vector.h:247:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void ecs_vector_remove_last(ecs_vector_t* vector);
 
-        // Function @ vector.h:254:6 (flecs/private/vector.h)
+        // Function @ vector.h:252:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern CBool _ecs_vector_pop(ecs_vector_t* vector, ecs_size_t elem_size, short offset, void* value);
 
-        // Function @ vector.h:265:9 (flecs/private/vector.h)
+        // Function @ vector.h:263:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_move_index(ecs_vector_t** dst, ecs_vector_t* src, ecs_size_t elem_size, short offset, int index);
 
-        // Function @ vector.h:280:9 (flecs/private/vector.h)
+        // Function @ vector.h:278:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_remove(ecs_vector_t* vector, ecs_size_t elem_size, short offset, int index);
 
-        // Function @ vector.h:294:6 (flecs/private/vector.h)
+        // Function @ vector.h:292:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void _ecs_vector_reclaim(ecs_vector_t** vector, ecs_size_t elem_size, short offset);
 
-        // Function @ vector.h:304:9 (flecs/private/vector.h)
+        // Function @ vector.h:302:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_grow(ecs_vector_t** vector, ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:315:9 (flecs/private/vector.h)
+        // Function @ vector.h:313:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_set_size(ecs_vector_t** vector, ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:330:9 (flecs/private/vector.h)
+        // Function @ vector.h:328:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int _ecs_vector_set_count(ecs_vector_t** vector, ecs_size_t elem_size, short offset, int elem_count);
 
-        // Function @ vector.h:344:9 (flecs/private/vector.h)
+        // Function @ vector.h:342:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int ecs_vector_count(ecs_vector_t* vector);
 
-        // Function @ vector.h:349:9 (flecs/private/vector.h)
+        // Function @ vector.h:347:9 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern int ecs_vector_size(ecs_vector_t* vector);
 
-        // Function @ vector.h:354:7 (flecs/private/vector.h)
+        // Function @ vector.h:352:7 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void* _ecs_vector_first(ecs_vector_t* vector, ecs_size_t elem_size, short offset);
 
-        // Function @ vector.h:367:6 (flecs/private/vector.h)
+        // Function @ vector.h:365:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void _ecs_vector_sort(ecs_vector_t* vector, ecs_size_t elem_size, short offset, ecs_comparator_t compare_action);
 
-        // Function @ vector.h:378:6 (flecs/private/vector.h)
+        // Function @ vector.h:376:6 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern void _ecs_vector_memory(ecs_vector_t* vector, ecs_size_t elem_size, short offset, int* allocd, int* used);
 
-        // Function @ vector.h:393:15 (flecs/private/vector.h)
+        // Function @ vector.h:391:15 (flecs/private/vector.h)
         [DllImport(LibraryName)]
         public static extern ecs_vector_t* _ecs_vector_copy(ecs_vector_t* src, ecs_size_t elem_size, short offset);
 
@@ -1840,7 +1840,7 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_module_init(ecs_world_t* world, ecs_component_desc_t* desc);
 
-        // FunctionPointer @ vector.h:92:15 (flecs/private/vector.h)
+        // FunctionPointer @ vector.h:90:15 (flecs/private/vector.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_comparator_t
         {
@@ -2216,20 +2216,6 @@ namespace bottlenoselabs
         public struct ecs_iter_init_action_t
         {
             public delegate* unmanaged<ecs_world_t*, ecs_poly_t*, ecs_iter_t*, ecs_term_t*, void> Pointer;
-        }
-
-        // Struct @ vector.h:90:29 (flecs/private/vector.h)
-        [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
-        public struct ecs_vector_t
-        {
-            [FieldOffset(0)] // size = 4, padding = 0
-            public int count;
-
-            [FieldOffset(4)] // size = 4, padding = 0
-            public int size;
-
-            [FieldOffset(8)] // size = 8, padding = 0
-            public long elem_size;
         }
 
         // Struct @ map.h:45:3 (flecs/private/map.h)
@@ -4454,6 +4440,12 @@ namespace bottlenoselabs
 
             [FieldOffset(4)] // size = 4, padding = 0
             public ecs_size_t alignment;
+        }
+
+        // OpaqueType @ vector.h:88:29 (flecs/private/vector.h)
+        [StructLayout(LayoutKind.Sequential)]
+        public struct ecs_vector_t
+        {
         }
 
         // OpaqueType @ map.h:36:26 (flecs/private/map.h)
