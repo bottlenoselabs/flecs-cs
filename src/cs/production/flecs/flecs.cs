@@ -278,57 +278,57 @@ namespace bottlenoselabs
 
         // Function @ strbuf.h:116:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
-        public static extern CBool ecs_strbuf_appendflt(ecs_strbuf_t* buffer, double v);
+        public static extern CBool ecs_strbuf_appendflt(ecs_strbuf_t* buffer, double v, CChar nan_delim);
 
-        // Function @ strbuf.h:123:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:124:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_strbuf_mergebuff(ecs_strbuf_t* dst_buffer, ecs_strbuf_t* src_buffer);
 
-        // Function @ strbuf.h:130:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:131:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_strbuf_appendstr_zerocpy(ecs_strbuf_t* buffer, CString str);
 
-        // Function @ strbuf.h:137:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:138:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_strbuf_appendstr_zerocpy_const(ecs_strbuf_t* buffer, CString str);
 
-        // Function @ strbuf.h:144:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:145:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_strbuf_appendstrn(ecs_strbuf_t* buffer, CString str, int n);
 
-        // Function @ strbuf.h:151:7 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:152:7 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CString ecs_strbuf_get(ecs_strbuf_t* buffer);
 
-        // Function @ strbuf.h:156:7 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:157:7 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CString ecs_strbuf_get_small(ecs_strbuf_t* buffer);
 
-        // Function @ strbuf.h:161:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:162:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern void ecs_strbuf_reset(ecs_strbuf_t* buffer);
 
-        // Function @ strbuf.h:166:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:167:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern void ecs_strbuf_list_push(ecs_strbuf_t* buffer, CString list_open, CString separator);
 
-        // Function @ strbuf.h:173:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:174:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern void ecs_strbuf_list_pop(ecs_strbuf_t* buffer, CString list_close);
 
-        // Function @ strbuf.h:179:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:180:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern void ecs_strbuf_list_next(ecs_strbuf_t* buffer);
 
-        // Function @ strbuf.h:184:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:185:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_strbuf_list_append(ecs_strbuf_t* buffer, CString fmt);
 
-        // Function @ strbuf.h:191:6 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:192:6 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_strbuf_list_appendstr(ecs_strbuf_t* buffer, CString str);
 
-        // Function @ strbuf.h:196:9 (flecs/private/strbuf.h)
+        // Function @ strbuf.h:197:9 (flecs/private/strbuf.h)
         [DllImport(LibraryName)]
         public static extern int ecs_strbuf_written(ecs_strbuf_t* buffer);
 
