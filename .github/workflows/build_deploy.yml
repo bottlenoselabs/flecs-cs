@@ -66,6 +66,4 @@ jobs:
         with:
           repository: '${{ github.repository }}'
           dotnet-sdk-version: '6.0.x'
-          myget-access-token: '${{ secrets.MYGET_ACCESS_TOKEN }}'
-          nuget-access-token: '${{ secrets.NUGET_ACCESS_TOKEN }}'
           
