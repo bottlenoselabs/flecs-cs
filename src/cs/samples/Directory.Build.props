@@ -2,4 +2,9 @@
 
     <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
 
+    <!-- MSBuild settings -->
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
 </Project>
