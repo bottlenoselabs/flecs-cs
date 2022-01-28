@@ -1524,99 +1524,99 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern int ecs_iter_to_json_buf(ecs_world_t* world, ecs_iter_t* iter, ecs_strbuf_t* buf_out, ecs_iter_to_json_desc_t* desc);
 
-        // Function @ meta.h:315:19 (flecs/addons/meta.h)
+        // Function @ meta.h:317:19 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_meta_cursor_t ecs_meta_cursor(ecs_world_t* world, ecs_entity_t type, void* ptr);
 
-        // Function @ meta.h:322:7 (flecs/addons/meta.h)
+        // Function @ meta.h:324:7 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern void* ecs_meta_get_ptr(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:327:5 (flecs/addons/meta.h)
+        // Function @ meta.h:329:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_next(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:332:5 (flecs/addons/meta.h)
+        // Function @ meta.h:334:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_move(ecs_meta_cursor_t* cursor, int pos);
 
-        // Function @ meta.h:338:5 (flecs/addons/meta.h)
+        // Function @ meta.h:340:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_member(ecs_meta_cursor_t* cursor, CString name);
 
-        // Function @ meta.h:344:5 (flecs/addons/meta.h)
+        // Function @ meta.h:346:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_push(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:349:5 (flecs/addons/meta.h)
+        // Function @ meta.h:351:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_pop(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:354:6 (flecs/addons/meta.h)
+        // Function @ meta.h:356:6 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern CBool ecs_meta_is_collection(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:359:14 (flecs/addons/meta.h)
+        // Function @ meta.h:361:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_meta_get_type(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:368:5 (flecs/addons/meta.h)
+        // Function @ meta.h:370:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_bool(ecs_meta_cursor_t* cursor, CBool value);
 
-        // Function @ meta.h:374:5 (flecs/addons/meta.h)
+        // Function @ meta.h:376:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_char(ecs_meta_cursor_t* cursor, CChar value);
 
-        // Function @ meta.h:380:5 (flecs/addons/meta.h)
+        // Function @ meta.h:382:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_int(ecs_meta_cursor_t* cursor, long value);
 
-        // Function @ meta.h:386:5 (flecs/addons/meta.h)
+        // Function @ meta.h:388:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_uint(ecs_meta_cursor_t* cursor, ulong value);
 
-        // Function @ meta.h:392:5 (flecs/addons/meta.h)
+        // Function @ meta.h:394:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_float(ecs_meta_cursor_t* cursor, double value);
 
-        // Function @ meta.h:398:5 (flecs/addons/meta.h)
+        // Function @ meta.h:400:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_string(ecs_meta_cursor_t* cursor, CString value);
 
-        // Function @ meta.h:404:5 (flecs/addons/meta.h)
+        // Function @ meta.h:406:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_string_literal(ecs_meta_cursor_t* cursor, CString value);
 
-        // Function @ meta.h:410:5 (flecs/addons/meta.h)
+        // Function @ meta.h:412:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_entity(ecs_meta_cursor_t* cursor, ecs_entity_t value);
 
-        // Function @ meta.h:416:5 (flecs/addons/meta.h)
+        // Function @ meta.h:418:5 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern int ecs_meta_set_null(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:430:14 (flecs/addons/meta.h)
+        // Function @ meta.h:432:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_enum_init(ecs_world_t* world, ecs_enum_desc_t* desc);
 
-        // Function @ meta.h:443:14 (flecs/addons/meta.h)
+        // Function @ meta.h:445:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_bitmask_init(ecs_world_t* world, ecs_bitmask_desc_t* desc);
 
-        // Function @ meta.h:457:14 (flecs/addons/meta.h)
+        // Function @ meta.h:459:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_array_init(ecs_world_t* world, ecs_array_desc_t* desc);
 
-        // Function @ meta.h:470:14 (flecs/addons/meta.h)
+        // Function @ meta.h:472:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_vector_init(ecs_world_t* world, ecs_vector_desc_t* desc);
 
-        // Function @ meta.h:483:14 (flecs/addons/meta.h)
+        // Function @ meta.h:485:14 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_struct_init(ecs_world_t* world, ecs_struct_desc_t* desc);
 
-        // Function @ meta.h:489:6 (flecs/addons/meta.h)
+        // Function @ meta.h:491:6 (flecs/addons/meta.h)
         [DllImport(LibraryName)]
         public static extern void FlecsMetaImport(ecs_world_t* world);
 
@@ -1839,6 +1839,38 @@ namespace bottlenoselabs
         // Function @ module.h:71:14 (flecs/addons/module.h)
         [DllImport(LibraryName)]
         public static extern ecs_entity_t ecs_module_init(ecs_world_t* world, ecs_component_desc_t* desc);
+
+        // Function @ flecs_cpp.h:39:7 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern CString ecs_cpp_get_type_name(CString type_name, CString func_name, ulong len);
+
+        // Function @ flecs_cpp.h:45:7 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern CString ecs_cpp_get_symbol_name(CString symbol_name, CString type_name, ulong len);
+
+        // Function @ flecs_cpp.h:51:7 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern CString ecs_cpp_get_constant_name(CString constant_name, CString func_name, ulong len);
+
+        // Function @ flecs_cpp.h:57:13 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern CString ecs_cpp_trim_module(ecs_world_t* world, CString type_name);
+
+        // Function @ flecs_cpp.h:62:6 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern void ecs_cpp_component_validate(ecs_world_t* world, ecs_entity_t id, CString name, ulong size, ulong alignment, CBool implicit_name);
+
+        // Function @ flecs_cpp.h:71:14 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern ecs_entity_t ecs_cpp_component_register(ecs_world_t* world, ecs_entity_t id, CString name, CString symbol, ecs_size_t size, ecs_size_t alignment);
+
+        // Function @ flecs_cpp.h:80:14 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern ecs_entity_t ecs_cpp_component_register_explicit(ecs_world_t* world, ecs_entity_t s_id, ecs_entity_t id, CString name, CString type_name, CString symbol, ulong size, ulong alignment);
+
+        // Function @ flecs_cpp.h:91:14 (flecs/addons/flecs_cpp.h)
+        [DllImport(LibraryName)]
+        public static extern ecs_entity_t ecs_cpp_enum_constant_register(ecs_world_t* world, ecs_entity_t parent, ecs_entity_t id, CString name, int value);
 
         // FunctionPointer @ vector.h:90:15 (flecs/private/vector.h)
         [StructLayout(LayoutKind.Sequential)]
@@ -2183,9 +2215,9 @@ namespace bottlenoselabs
             public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_system_status_t, void*, void> Pointer;
         }
 
-        // FunctionPointer @ meta.h:310:20 (flecs/addons/meta.h)
+        // FunctionPointer @ meta.h:312:20 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Sequential)]
-        public struct FnPtr_FLECS_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t
+        public struct FnPtr_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t
         {
             public delegate* unmanaged<ecs_world_t*, CString, void*, ecs_entity_t> Pointer;
         }
@@ -3377,7 +3409,7 @@ namespace bottlenoselabs
             public CBool serialize_type_info;
         }
 
-        // Struct @ meta.h:312:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:314:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 2080, Pack = 8)]
         public struct ecs_meta_cursor_t
         {
@@ -3410,13 +3442,13 @@ namespace bottlenoselabs
             public CBool is_primitive_scope;
 
             [FieldOffset(2064)] // size = 8, padding = 0
-            public FnPtr_FLECS_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t lookup_action;
+            public FnPtr_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t lookup_action;
 
             [FieldOffset(2072)] // size = 8, padding = 0
             public void* lookup_ctx;
         }
 
-        // Struct @ meta.h:426:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:428:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 1088, Pack = 8)]
         public struct ecs_enum_desc_t
         {
@@ -3440,7 +3472,7 @@ namespace bottlenoselabs
             }
         }
 
-        // Struct @ meta.h:439:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:441:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 1088, Pack = 8)]
         public struct ecs_bitmask_desc_t
         {
@@ -3464,7 +3496,7 @@ namespace bottlenoselabs
             }
         }
 
-        // Struct @ meta.h:453:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:455:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 336, Pack = 8)]
         public struct ecs_array_desc_t
         {
@@ -3478,7 +3510,7 @@ namespace bottlenoselabs
             public int count;
         }
 
-        // Struct @ meta.h:466:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:468:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 328, Pack = 8)]
         public struct ecs_vector_desc_t
         {
@@ -3489,7 +3521,7 @@ namespace bottlenoselabs
             public ecs_entity_t type;
         }
 
-        // Struct @ meta.h:479:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:481:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 1600, Pack = 8)]
         public struct ecs_struct_desc_t
         {
@@ -3524,7 +3556,7 @@ namespace bottlenoselabs
             public CString expr;
 
             [FieldOffset(16)] // size = 8, padding = 0
-            public FnPtr_FLECS_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t lookup_action;
+            public FnPtr_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t lookup_action;
 
             [FieldOffset(24)] // size = 8, padding = 0
             public void* lookup_ctx;
@@ -4285,7 +4317,7 @@ namespace bottlenoselabs
             public int count;
         }
 
-        // Struct @ meta.h:299:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:301:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 64, Pack = 8)]
         public struct ecs_meta_scope_t
         {
@@ -4320,7 +4352,7 @@ namespace bottlenoselabs
             public CBool is_inline_array;
         }
 
-        // Struct @ meta.h:200:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:202:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
         public struct ecs_enum_constant_t
         {
@@ -4334,7 +4366,7 @@ namespace bottlenoselabs
             public ecs_entity_t constant;
         }
 
-        // Struct @ meta.h:216:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:218:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
         public struct ecs_bitmask_constant_t
         {
@@ -4348,7 +4380,7 @@ namespace bottlenoselabs
             public ecs_entity_t constant;
         }
 
-        // Struct @ meta.h:184:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:186:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
         public struct ecs_member_t
         {
@@ -4402,7 +4434,7 @@ namespace bottlenoselabs
             public CString value;
         }
 
-        // Struct @ meta.h:276:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:278:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
         public struct ecs_meta_type_op_t
         {
@@ -4660,7 +4692,7 @@ namespace bottlenoselabs
             public static implicit operator ecs_flags32_t(uint data) => new() { Data = data };
         }
 
-        // Enum @ meta.h:160:3 (flecs/addons/meta.h)
+        // Enum @ meta.h:162:3 (flecs/addons/meta.h)
         public enum ecs_primitive_kind_t : int
         {
             EcsBool = 1,
@@ -4679,10 +4711,11 @@ namespace bottlenoselabs
             EcsUPtr = 14,
             EcsIPtr = 15,
             EcsString = 16,
-            EcsEntity = 17
+            EcsEntity = 17,
+            EcsPrimitiveKindLast = 17
         }
 
-        // Enum @ meta.h:135:3 (flecs/addons/meta.h)
+        // Enum @ meta.h:136:3 (flecs/addons/meta.h)
         public enum ecs_type_kind_t : int
         {
             EcsPrimitiveType = 0,
@@ -4690,7 +4723,8 @@ namespace bottlenoselabs
             EcsEnumType = 2,
             EcsStructType = 3,
             EcsArrayType = 4,
-            EcsVectorType = 5
+            EcsVectorType = 5,
+            EcsTypeKindLast = 5
         }
 
         // Enum @ flecs.h:321:3
@@ -4752,7 +4786,7 @@ namespace bottlenoselabs
             EcsIterEvalNone = 3
         }
 
-        // Enum @ meta.h:265:3 (flecs/addons/meta.h)
+        // Enum @ meta.h:267:3 (flecs/addons/meta.h)
         public enum ecs_meta_type_op_kind_t : int
         {
             EcsOpArray = 0,
@@ -5004,7 +5038,7 @@ namespace bottlenoselabs
         // MacroDefinition @ meta.h:70:9 (flecs/addons/meta.h)
         public const int ECS_MEMBER_DESC_CACHE_SIZE = 32;
 
-        // MacroDefinition @ meta.h:285:9 (flecs/addons/meta.h)
+        // MacroDefinition @ meta.h:287:9 (flecs/addons/meta.h)
         public const int ECS_META_MAX_SCOPE_DEPTH = 32;
 
         // MacroDefinition @ stats.h:18:9 (flecs/addons/stats.h)
@@ -5015,6 +5049,9 @@ namespace bottlenoselabs
 
         // MacroDefinition @ http.h:33:9 (flecs/addons/http.h)
         public const int ECS_HTTP_QUERY_PARAM_COUNT_MAX = 32;
+
+        // MacroDefinition @ flecs_cpp.h:21:9 (flecs/addons/flecs_cpp.h)
+        public const int ECS_FUNC_NAME_BACK = sizeof("]")-1u;
 
         #region C2CS.Runtime
 
