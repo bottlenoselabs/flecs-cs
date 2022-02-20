@@ -1536,11 +1536,11 @@ namespace bottlenoselabs
         [DllImport(LibraryName)]
         public static extern int ecs_entity_to_json_buf(ecs_world_t* world, ecs_entity_t entity, ecs_strbuf_t* buf_out, ecs_entity_to_json_desc_t* desc);
 
-        // Function @ json.h:212:7 (flecs/addons/json.h)
+        // Function @ json.h:214:7 (flecs/addons/json.h)
         [DllImport(LibraryName)]
         public static extern CString ecs_iter_to_json(ecs_world_t* world, ecs_iter_t* iter, ecs_iter_to_json_desc_t* desc);
 
-        // Function @ json.h:226:5 (flecs/addons/json.h)
+        // Function @ json.h:228:5 (flecs/addons/json.h)
         [DllImport(LibraryName)]
         public static extern int ecs_iter_to_json_buf(ecs_world_t* world, ecs_iter_t* iter, ecs_strbuf_t* buf_out, ecs_iter_to_json_desc_t* desc);
 
@@ -3408,8 +3408,8 @@ namespace bottlenoselabs
             public CBool serialize_type_info;
         }
 
-        // Struct @ json.h:198:3 (flecs/addons/json.h)
-        [StructLayout(LayoutKind.Explicit, Size = 9, Pack = 1)]
+        // Struct @ json.h:200:3 (flecs/addons/json.h)
+        [StructLayout(LayoutKind.Explicit, Size = 11, Pack = 1)]
         public struct ecs_iter_to_json_desc_t
         {
             [FieldOffset(0)] // size = 1, padding = 0
@@ -3434,9 +3434,15 @@ namespace bottlenoselabs
             public CBool serialize_entities;
 
             [FieldOffset(7)] // size = 1, padding = 0
-            public CBool measure_eval_duration;
+            public CBool serialize_entity_labels;
 
             [FieldOffset(8)] // size = 1, padding = 0
+            public CBool serialize_variable_labels;
+
+            [FieldOffset(9)] // size = 1, padding = 0
+            public CBool measure_eval_duration;
+
+            [FieldOffset(10)] // size = 1, padding = 0
             public CBool serialize_type_info;
         }
 
