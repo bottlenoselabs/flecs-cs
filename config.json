@@ -4,6 +4,7 @@
     "namespaceName": "bottlenoselabs",
     "machineBitWidth": 64,
     "ignoredTypeNames": [
-      "FLECS_FLOAT"
+      "FLECS_FLOAT",
+      "ECS_FUNC_NAME_BACK"
     ]
   }
