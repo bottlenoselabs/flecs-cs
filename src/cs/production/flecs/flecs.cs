@@ -2173,35 +2173,35 @@ namespace bottlenoselabs
             public delegate* unmanaged<CString, CString> Pointer;
         }
 
-        // FunctionPointer @ api_types.h:295:16 (flecs/private/api_types.h)
+        // FunctionPointer @ api_types.h:297:16 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_xtor_t
         {
             public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, void*, ulong, int, void*, void> Pointer;
         }
 
-        // FunctionPointer @ api_types.h:305:16 (flecs/private/api_types.h)
+        // FunctionPointer @ api_types.h:307:16 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_copy_t
         {
             public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
         }
 
-        // FunctionPointer @ api_types.h:317:16 (flecs/private/api_types.h)
+        // FunctionPointer @ api_types.h:319:16 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_move_t
         {
             public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
         }
 
-        // FunctionPointer @ api_types.h:329:16 (flecs/private/api_types.h)
+        // FunctionPointer @ api_types.h:331:16 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_copy_ctor_t
         {
             public delegate* unmanaged<ecs_world_t*, ecs_entity_t, EcsComponentLifecycle*, ecs_entity_t*, ecs_entity_t*, void*, void*, ulong, int, void*, void> Pointer;
         }
 
-        // FunctionPointer @ api_types.h:342:16 (flecs/private/api_types.h)
+        // FunctionPointer @ api_types.h:344:16 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_move_ctor_t
         {
@@ -2495,7 +2495,7 @@ namespace bottlenoselabs
             public uint nanosec;
         }
 
-        // Struct @ api_types.h:167:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:168:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
         public struct ecs_sparse_iter_t
         {
@@ -2563,7 +2563,7 @@ namespace bottlenoselabs
             public int index;
         }
 
-        // Struct @ api_types.h:292:38 (flecs/private/api_types.h)
+        // Struct @ api_types.h:294:38 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 80, Pack = 8)]
         public struct EcsComponentLifecycle
         {
@@ -2809,7 +2809,7 @@ namespace bottlenoselabs
         }
 
         // Struct @ flecs.h:149:27
-        [StructLayout(LayoutKind.Explicit, Size = 1576, Pack = 8)]
+        [StructLayout(LayoutKind.Explicit, Size = 1584, Pack = 8)]
         public struct ecs_iter_t
         {
             [FieldOffset(0)] // size = 8, padding = 0
@@ -2936,9 +2936,12 @@ namespace bottlenoselabs
             public ecs_iter_next_action_t next;
 
             [FieldOffset(1560)] // size = 8, padding = 0
-            public ecs_iter_fini_action_t fini;
+            public ecs_iter_action_t callback;
 
             [FieldOffset(1568)] // size = 8, padding = 0
+            public ecs_iter_fini_action_t fini;
+
+            [FieldOffset(1576)] // size = 8, padding = 0
             public ecs_iter_t* chain_it;
         }
 
@@ -3965,7 +3968,7 @@ namespace bottlenoselabs
             public ecs_strbuf_element* next;
         }
 
-        // Struct @ api_types.h:216:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:217:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 1312, Pack = 8)]
         public struct ecs_iter_private_t
         {
@@ -3975,7 +3978,7 @@ namespace bottlenoselabs
             [FieldOffset(1160)] // size = 152, padding = 0
             public ecs_iter_cache_t cache;
 
-            // Union @ api_types.h:205:5 (flecs/private/api_types.h)
+            // Union @ api_types.h:206:5 (flecs/private/api_types.h)
             [StructLayout(LayoutKind.Explicit, Size = 1160, Pack = 8)]
             public struct ecs_iter_private_t_iter
             {
@@ -4119,7 +4122,7 @@ namespace bottlenoselabs
             public CString separator;
         }
 
-        // Struct @ api_types.h:200:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:201:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 152, Pack = 8)]
         public struct ecs_iter_cache_t
         {
@@ -4308,7 +4311,7 @@ namespace bottlenoselabs
             public int matches_left;
         }
 
-        // Struct @ api_types.h:151:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:152:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
         public struct ecs_query_iter_t
         {
@@ -4327,11 +4330,14 @@ namespace bottlenoselabs
             [FieldOffset(28)] // size = 4, padding = 0
             public int sparse_first;
 
-            [FieldOffset(32)] // size = 4, padding = 4
+            [FieldOffset(32)] // size = 4, padding = 0
             public int bitset_first;
+
+            [FieldOffset(36)] // size = 4, padding = 0
+            public int skip_count;
         }
 
-        // Struct @ api_types.h:183:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:184:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 64, Pack = 8)]
         public struct ecs_rule_iter_t
         {
@@ -4363,7 +4369,7 @@ namespace bottlenoselabs
             public int sp;
         }
 
-        // Struct @ api_types.h:158:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:159:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 856, Pack = 8)]
         public struct ecs_snapshot_iter_t
         {
@@ -4666,13 +4672,13 @@ namespace bottlenoselabs
         {
         }
 
-        // OpaqueType @ api_types.h:172:12 (flecs/private/api_types.h)
+        // OpaqueType @ api_types.h:173:12 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_rule_reg_t
         {
         }
 
-        // OpaqueType @ api_types.h:174:12 (flecs/private/api_types.h)
+        // OpaqueType @ api_types.h:175:12 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_rule_op_ctx_t
         {
