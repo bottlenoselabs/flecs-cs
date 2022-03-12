@@ -1380,7 +1380,7 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_app_set_frame_action(ecs_app_frame_action_t callback);
 
-        // Function @ rest.h:144:6 (flecs/addons/rest.h)
+        // Function @ rest.h:160:6 (flecs/addons/rest.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FlecsRestImport(ecs_world_t* world);
 
@@ -1556,19 +1556,19 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_type_info_to_json_buf(ecs_world_t* world, ecs_entity_t type, ecs_strbuf_t* buf_out);
 
-        // Function @ json.h:168:7 (flecs/addons/json.h)
+        // Function @ json.h:171:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_entity_to_json(ecs_world_t* world, ecs_entity_t entity, ecs_entity_to_json_desc_t* desc);
 
-        // Function @ json.h:182:5 (flecs/addons/json.h)
+        // Function @ json.h:185:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_entity_to_json_buf(ecs_world_t* world, ecs_entity_t entity, ecs_strbuf_t* buf_out, ecs_entity_to_json_desc_t* desc);
 
-        // Function @ json.h:215:7 (flecs/addons/json.h)
+        // Function @ json.h:218:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_iter_to_json(ecs_world_t* world, ecs_iter_t* iter, ecs_iter_to_json_desc_t* desc);
 
-        // Function @ json.h:229:5 (flecs/addons/json.h)
+        // Function @ json.h:232:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_iter_to_json_buf(ecs_world_t* world, ecs_iter_t* iter, ecs_strbuf_t* buf_out, ecs_iter_to_json_desc_t* desc);
 
@@ -3481,27 +3481,36 @@ namespace bottlenoselabs
             public CString expr;
         }
 
-        // Struct @ json.h:152:3 (flecs/addons/json.h)
-        [StructLayout(LayoutKind.Explicit, Size = 5, Pack = 1)]
+        // Struct @ json.h:155:3 (flecs/addons/json.h)
+        [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 1)]
         public struct ecs_entity_to_json_desc_t
         {
             [FieldOffset(0)] // size = 1, padding = 0
             public CBool serialize_path;
 
             [FieldOffset(1)] // size = 1, padding = 0
-            public CBool serialize_base;
+            public CBool serialize_label;
 
             [FieldOffset(2)] // size = 1, padding = 0
-            public CBool serialize_private;
+            public CBool serialize_id_labels;
 
             [FieldOffset(3)] // size = 1, padding = 0
-            public CBool serialize_values;
+            public CBool serialize_base;
 
             [FieldOffset(4)] // size = 1, padding = 0
+            public CBool serialize_private;
+
+            [FieldOffset(5)] // size = 1, padding = 0
+            public CBool serialize_hidden;
+
+            [FieldOffset(6)] // size = 1, padding = 0
+            public CBool serialize_values;
+
+            [FieldOffset(7)] // size = 1, padding = 0
             public CBool serialize_type_info;
         }
 
-        // Struct @ json.h:201:3 (flecs/addons/json.h)
+        // Struct @ json.h:204:3 (flecs/addons/json.h)
         [StructLayout(LayoutKind.Explicit, Size = 11, Pack = 1)]
         public struct ecs_iter_to_json_desc_t
         {
@@ -5287,7 +5296,7 @@ namespace bottlenoselabs
         // MacroDefinition @ flecs.h:1152:9
         public const int EcsFirstUserEntityId = ECS_HI_COMPONENT_ID + 128;
 
-        // MacroDefinition @ rest.h:131:9 (flecs/addons/rest.h)
+        // MacroDefinition @ rest.h:147:9 (flecs/addons/rest.h)
         public const int ECS_REST_DEFAULT_PORT = 27750;
 
         // MacroDefinition @ meta.h:70:9 (flecs/addons/meta.h)
