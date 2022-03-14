@@ -188,75 +188,87 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_vector_t* _ecs_vector_copy(ecs_vector_t* src, ecs_size_t elem_size, short offset);
 
-        // Function @ map.h:49:12 (flecs/private/map.h)
+        // Function @ map.h:65:6 (flecs/private/map.h)
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void _ecs_map_init(ecs_map_t* map, ecs_size_t elem_size, int elem_count);
+
+        // Function @ map.h:75:6 (flecs/private/map.h)
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void ecs_map_fini(ecs_map_t* map);
+
+        // Function @ map.h:80:12 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_map_t* _ecs_map_new(ecs_size_t elem_size, int elem_count);
 
-        // Function @ map.h:58:7 (flecs/private/map.h)
+        // Function @ map.h:88:6 (flecs/private/map.h)
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern CBool ecs_map_is_initialized(ecs_map_t* result);
+
+        // Function @ map.h:93:7 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_map_get(ecs_map_t* map, ecs_size_t elem_size, ecs_map_key_t key);
 
-        // Function @ map.h:71:7 (flecs/private/map.h)
+        // Function @ map.h:106:7 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_map_get_ptr(ecs_map_t* map, ecs_map_key_t key);
 
-        // Function @ map.h:80:6 (flecs/private/map.h)
+        // Function @ map.h:115:6 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_map_has(ecs_map_t* map, ecs_map_key_t key);
 
-        // Function @ map.h:86:7 (flecs/private/map.h)
+        // Function @ map.h:121:7 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_map_ensure(ecs_map_t* map, ecs_size_t elem_size, ecs_map_key_t key);
 
-        // Function @ map.h:96:7 (flecs/private/map.h)
+        // Function @ map.h:131:7 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_map_set(ecs_map_t* map, ecs_size_t elem_size, ecs_map_key_t key, void* payload);
 
-        // Function @ map.h:110:6 (flecs/private/map.h)
+        // Function @ map.h:145:6 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_map_free(ecs_map_t* map);
 
-        // Function @ map.h:117:9 (flecs/private/map.h)
+        // Function @ map.h:152:9 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_map_remove(ecs_map_t* map, ecs_map_key_t key);
 
-        // Function @ map.h:123:6 (flecs/private/map.h)
+        // Function @ map.h:158:6 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_map_clear(ecs_map_t* map);
 
-        // Function @ map.h:128:9 (flecs/private/map.h)
+        // Function @ map.h:163:9 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_map_count(ecs_map_t* map);
 
-        // Function @ map.h:133:9 (flecs/private/map.h)
+        // Function @ map.h:168:9 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_map_bucket_count(ecs_map_t* map);
 
-        // Function @ map.h:138:16 (flecs/private/map.h)
+        // Function @ map.h:173:16 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_map_iter_t ecs_map_iter(ecs_map_t* map);
 
-        // Function @ map.h:143:7 (flecs/private/map.h)
+        // Function @ map.h:178:7 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_map_next(ecs_map_iter_t* iter, ecs_size_t elem_size, ecs_map_key_t* key);
 
-        // Function @ map.h:153:7 (flecs/private/map.h)
+        // Function @ map.h:188:7 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_map_next_ptr(ecs_map_iter_t* iter, ecs_map_key_t* key);
 
-        // Function @ map.h:162:6 (flecs/private/map.h)
+        // Function @ map.h:197:6 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_map_grow(ecs_map_t* map, int elem_count);
 
-        // Function @ map.h:168:6 (flecs/private/map.h)
+        // Function @ map.h:203:6 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_map_set_size(ecs_map_t* map, int elem_count);
 
-        // Function @ map.h:174:12 (flecs/private/map.h)
+        // Function @ map.h:209:12 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_map_t* ecs_map_copy(ecs_map_t* map);
 
-        // Function @ map.h:179:6 (flecs/private/map.h)
+        // Function @ map.h:214:6 (flecs/private/map.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_map_memory(ecs_map_t* map, int* allocd, int* used);
 
@@ -348,75 +360,75 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_set_api_defaults();
 
-        // Function @ os_api.h:407:6 (flecs/os_api.h)
+        // Function @ os_api.h:408:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_enable_high_timer_resolution(CBool enable);
 
-        // Function @ os_api.h:411:6 (flecs/os_api.h)
+        // Function @ os_api.h:412:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_dbg(CString file, int line, CString msg);
 
-        // Function @ os_api.h:414:6 (flecs/os_api.h)
+        // Function @ os_api.h:415:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_trace(CString file, int line, CString msg);
 
-        // Function @ os_api.h:417:6 (flecs/os_api.h)
+        // Function @ os_api.h:418:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_warn(CString file, int line, CString msg);
 
-        // Function @ os_api.h:420:6 (flecs/os_api.h)
+        // Function @ os_api.h:421:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_err(CString file, int line, CString msg);
 
-        // Function @ os_api.h:423:6 (flecs/os_api.h)
+        // Function @ os_api.h:424:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_os_fatal(CString file, int line, CString msg);
 
-        // Function @ os_api.h:426:13 (flecs/os_api.h)
+        // Function @ os_api.h:427:13 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_os_strerror(int err);
 
-        // Function @ os_api.h:442:6 (flecs/os_api.h)
+        // Function @ os_api.h:443:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_sleepf(double t);
 
-        // Function @ os_api.h:447:8 (flecs/os_api.h)
+        // Function @ os_api.h:448:8 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double ecs_time_measure(ecs_time_t* start);
 
-        // Function @ os_api.h:452:12 (flecs/os_api.h)
+        // Function @ os_api.h:453:12 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_time_t ecs_time_sub(ecs_time_t t1, ecs_time_t t2);
 
-        // Function @ os_api.h:458:8 (flecs/os_api.h)
+        // Function @ os_api.h:459:8 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double ecs_time_to_double(ecs_time_t t);
 
-        // Function @ os_api.h:462:7 (flecs/os_api.h)
+        // Function @ os_api.h:463:7 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* ecs_os_memdup(void* src, ecs_size_t size);
 
-        // Function @ os_api.h:468:6 (flecs/os_api.h)
+        // Function @ os_api.h:469:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_os_has_heap();
 
-        // Function @ os_api.h:472:6 (flecs/os_api.h)
+        // Function @ os_api.h:473:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_os_has_threading();
 
-        // Function @ os_api.h:476:6 (flecs/os_api.h)
+        // Function @ os_api.h:477:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_os_has_time();
 
-        // Function @ os_api.h:480:6 (flecs/os_api.h)
+        // Function @ os_api.h:481:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_os_has_logging();
 
-        // Function @ os_api.h:484:6 (flecs/os_api.h)
+        // Function @ os_api.h:485:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_os_has_dl();
 
-        // Function @ os_api.h:488:6 (flecs/os_api.h)
+        // Function @ os_api.h:489:6 (flecs/os_api.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_os_has_modules();
 
@@ -440,175 +452,183 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ecs_default_ctor(ecs_world_t* world, ecs_entity_t component, ecs_entity_t* entity_ptr, void* ptr, ulong size, int count, void* ctx);
 
-        // Function @ sparse.h:47:15 (flecs/private/sparse.h)
+        // Function @ sparse.h:60:6 (flecs/private/sparse.h)
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void _flecs_sparse_init(ecs_sparse_t* sparse, ecs_size_t elem_size);
+
+        // Function @ sparse.h:69:15 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_sparse_t* _flecs_sparse_new(ecs_size_t elem_size);
 
-        // Function @ sparse.h:56:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:76:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void flecs_sparse_set_id_source(ecs_sparse_t* sparse, ulong* id_source);
+        public static extern void _flecs_sparse_fini(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:62:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:84:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_free(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:67:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:89:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_clear(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:72:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:95:6 (flecs/private/sparse.h)
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void flecs_sparse_set_id_source(ecs_sparse_t* sparse, ulong* id_source);
+
+        // Function @ sparse.h:101:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_add(ecs_sparse_t* sparse, ecs_size_t elem_size);
 
-        // Function @ sparse.h:81:10 (flecs/private/sparse.h)
+        // Function @ sparse.h:110:10 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong flecs_sparse_last_id(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:86:10 (flecs/private/sparse.h)
+        // Function @ sparse.h:115:10 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong flecs_sparse_new_id(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:93:17 (flecs/private/sparse.h)
+        // Function @ sparse.h:122:17 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong* flecs_sparse_new_ids(ecs_sparse_t* sparse, int count);
 
-        // Function @ sparse.h:99:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:128:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_remove(ecs_sparse_t* sparse, ulong id);
 
-        // Function @ sparse.h:105:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:134:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_remove_get(ecs_sparse_t* sparse, ecs_size_t elem_size, ulong id);
 
-        // Function @ sparse.h:115:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:144:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool flecs_sparse_exists(ecs_sparse_t* sparse, ulong id);
 
-        // Function @ sparse.h:121:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:150:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool flecs_sparse_is_alive(ecs_sparse_t* sparse, ulong id);
 
-        // Function @ sparse.h:127:10 (flecs/private/sparse.h)
+        // Function @ sparse.h:156:10 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong flecs_sparse_get_alive(ecs_sparse_t* sparse, ulong id);
 
-        // Function @ sparse.h:134:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:163:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_get_dense(ecs_sparse_t* sparse, ecs_size_t elem_size, int index);
 
-        // Function @ sparse.h:144:9 (flecs/private/sparse.h)
+        // Function @ sparse.h:173:9 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int flecs_sparse_count(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:149:9 (flecs/private/sparse.h)
+        // Function @ sparse.h:178:9 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int flecs_sparse_size(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:155:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:184:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_get(ecs_sparse_t* sparse, ecs_size_t elem_size, ulong id);
 
-        // Function @ sparse.h:165:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:194:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_get_any(ecs_sparse_t* sparse, ecs_size_t elem_size, ulong id);
 
-        // Function @ sparse.h:175:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:204:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_ensure(ecs_sparse_t* sparse, ecs_size_t elem_size, ulong id);
 
-        // Function @ sparse.h:185:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:214:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_sparse_set(ecs_sparse_t* sparse, ecs_size_t elem_size, ulong id, void* value);
 
-        // Function @ sparse.h:196:17 (flecs/private/sparse.h)
+        // Function @ sparse.h:225:17 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong* flecs_sparse_ids(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:201:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:230:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_set_size(ecs_sparse_t* sparse, int elem_count);
 
-        // Function @ sparse.h:207:15 (flecs/private/sparse.h)
+        // Function @ sparse.h:236:15 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_sparse_t* flecs_sparse_copy(ecs_sparse_t* src);
 
-        // Function @ sparse.h:212:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:241:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_restore(ecs_sparse_t* dst, ecs_sparse_t* src);
 
-        // Function @ sparse.h:218:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:247:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_memory(ecs_sparse_t* sparse, int* allocd, int* used);
 
-        // Function @ sparse.h:224:19 (flecs/private/sparse.h)
+        // Function @ sparse.h:253:19 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_sparse_iter_t _flecs_sparse_iter(ecs_sparse_t* sparse, ecs_size_t elem_size);
 
-        // Function @ sparse.h:247:15 (flecs/private/sparse.h)
+        // Function @ sparse.h:276:15 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_sparse_t* _ecs_sparse_new(ecs_size_t elem_size);
 
-        // Function @ sparse.h:254:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:283:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_sparse_add(ecs_sparse_t* sparse, ecs_size_t elem_size);
 
-        // Function @ sparse.h:262:10 (flecs/private/sparse.h)
+        // Function @ sparse.h:291:10 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong ecs_sparse_last_id(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:266:9 (flecs/private/sparse.h)
+        // Function @ sparse.h:295:9 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_sparse_count(ecs_sparse_t* sparse);
 
-        // Function @ sparse.h:271:6 (flecs/private/sparse.h)
+        // Function @ sparse.h:300:6 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void flecs_sparse_set_generation(ecs_sparse_t* sparse, ulong id);
 
-        // Function @ sparse.h:276:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:305:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_sparse_get_dense(ecs_sparse_t* sparse, ecs_size_t elem_size, int index);
 
-        // Function @ sparse.h:285:7 (flecs/private/sparse.h)
+        // Function @ sparse.h:314:7 (flecs/private/sparse.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _ecs_sparse_get(ecs_sparse_t* sparse, ecs_size_t elem_size, ulong id);
 
-        // Function @ hashmap.h:39:15 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:39:6 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern ecs_hashmap_t _flecs_hashmap_new(ecs_size_t key_size, ecs_size_t value_size, ecs_hash_value_action_t hash, ecs_compare_action_t compare);
+        public static extern void _flecs_hashmap_init(ecs_hashmap_t* hm, ecs_size_t key_size, ecs_size_t value_size, ecs_hash_value_action_t hash, ecs_compare_action_t compare);
 
-        // Function @ hashmap.h:49:6 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:50:6 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void flecs_hashmap_free(ecs_hashmap_t map);
+        public static extern void flecs_hashmap_fini(ecs_hashmap_t* map);
 
-        // Function @ hashmap.h:53:7 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:54:7 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void* _flecs_hashmap_get(ecs_hashmap_t map, ecs_size_t key_size, void* key, ecs_size_t value_size);
+        public static extern void* _flecs_hashmap_get(ecs_hashmap_t* map, ecs_size_t key_size, void* key, ecs_size_t value_size);
 
-        // Function @ hashmap.h:63:24 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:64:24 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern flecs_hashmap_result_t _flecs_hashmap_ensure(ecs_hashmap_t map, ecs_size_t key_size, void* key, ecs_size_t value_size);
+        public static extern flecs_hashmap_result_t _flecs_hashmap_ensure(ecs_hashmap_t* map, ecs_size_t key_size, void* key, ecs_size_t value_size);
 
-        // Function @ hashmap.h:73:6 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:74:6 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void _flecs_hashmap_set(ecs_hashmap_t map, ecs_size_t key_size, void* key, ecs_size_t value_size, void* value);
+        public static extern void _flecs_hashmap_set(ecs_hashmap_t* map, ecs_size_t key_size, void* key, ecs_size_t value_size, void* value);
 
-        // Function @ hashmap.h:84:6 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:85:6 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void _flecs_hashmap_remove(ecs_hashmap_t map, ecs_size_t key_size, void* key, ecs_size_t value_size);
+        public static extern void _flecs_hashmap_remove(ecs_hashmap_t* map, ecs_size_t key_size, void* key, ecs_size_t value_size);
 
-        // Function @ hashmap.h:94:6 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:95:6 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void _flecs_hashmap_remove_w_hash(ecs_hashmap_t map, ecs_size_t key_size, void* key, ecs_size_t value_size, ulong hash);
+        public static extern void _flecs_hashmap_remove_w_hash(ecs_hashmap_t* map, ecs_size_t key_size, void* key, ecs_size_t value_size, ulong hash);
 
-        // Function @ hashmap.h:105:15 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:106:6 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern ecs_hashmap_t flecs_hashmap_copy(ecs_hashmap_t src);
+        public static extern void flecs_hashmap_copy(ecs_hashmap_t* src, ecs_hashmap_t* dst);
 
-        // Function @ hashmap.h:109:22 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:111:22 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern flecs_hashmap_iter_t flecs_hashmap_iter(ecs_hashmap_t map);
+        public static extern flecs_hashmap_iter_t flecs_hashmap_iter(ecs_hashmap_t* map);
 
-        // Function @ hashmap.h:113:7 (flecs/private/hashmap.h)
+        // Function @ hashmap.h:115:7 (flecs/private/hashmap.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* _flecs_hashmap_next(flecs_hashmap_iter_t* it, ecs_size_t key_size, void* key_out, ecs_size_t value_size);
 
@@ -1380,7 +1400,7 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_app_set_frame_action(ecs_app_frame_action_t callback);
 
-        // Function @ rest.h:160:6 (flecs/addons/rest.h)
+        // Function @ rest.h:53:6 (flecs/addons/rest.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FlecsRestImport(ecs_world_t* world);
 
@@ -1528,51 +1548,51 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FlecsDocImport(ecs_world_t* world);
 
-        // Function @ json.h:40:13 (flecs/addons/json.h)
+        // Function @ json.h:42:13 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_parse_json(ecs_world_t* world, CString ptr, ecs_entity_t type, void* data_out, ecs_parse_json_desc_t* desc);
 
-        // Function @ json.h:62:7 (flecs/addons/json.h)
+        // Function @ json.h:64:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_array_to_json(ecs_world_t* world, ecs_entity_t type, void* data, int count);
 
-        // Function @ json.h:79:5 (flecs/addons/json.h)
+        // Function @ json.h:81:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_array_to_json_buf(ecs_world_t* world, ecs_entity_t type, void* data, int count, ecs_strbuf_t* buf_out);
 
-        // Function @ json.h:95:7 (flecs/addons/json.h)
+        // Function @ json.h:97:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_ptr_to_json(ecs_world_t* world, ecs_entity_t type, void* data);
 
-        // Function @ json.h:110:5 (flecs/addons/json.h)
+        // Function @ json.h:112:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_ptr_to_json_buf(ecs_world_t* world, ecs_entity_t type, void* data, ecs_strbuf_t* buf_out);
 
-        // Function @ json.h:127:7 (flecs/addons/json.h)
+        // Function @ json.h:129:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_type_info_to_json(ecs_world_t* world, ecs_entity_t type);
 
-        // Function @ json.h:140:5 (flecs/addons/json.h)
+        // Function @ json.h:142:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_type_info_to_json_buf(ecs_world_t* world, ecs_entity_t type, ecs_strbuf_t* buf_out);
 
-        // Function @ json.h:171:7 (flecs/addons/json.h)
+        // Function @ json.h:176:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_entity_to_json(ecs_world_t* world, ecs_entity_t entity, ecs_entity_to_json_desc_t* desc);
 
-        // Function @ json.h:185:5 (flecs/addons/json.h)
+        // Function @ json.h:190:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_entity_to_json_buf(ecs_world_t* world, ecs_entity_t entity, ecs_strbuf_t* buf_out, ecs_entity_to_json_desc_t* desc);
 
-        // Function @ json.h:218:7 (flecs/addons/json.h)
+        // Function @ json.h:223:7 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_iter_to_json(ecs_world_t* world, ecs_iter_t* iter, ecs_iter_to_json_desc_t* desc);
 
-        // Function @ json.h:232:5 (flecs/addons/json.h)
+        // Function @ json.h:237:5 (flecs/addons/json.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_iter_to_json_buf(ecs_world_t* world, ecs_iter_t* iter, ecs_strbuf_t* buf_out, ecs_iter_to_json_desc_t* desc);
 
-        // Function @ units.h:169:6 (flecs/addons/units.h)
+        // Function @ units.h:170:6 (flecs/addons/units.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FlecsUnitsImport(ecs_world_t* world);
 
@@ -2362,7 +2382,27 @@ namespace bottlenoselabs
             public delegate* unmanaged<ecs_world_t*, ecs_poly_t*, ecs_iter_t*, ecs_term_t*, void> Pointer;
         }
 
-        // Struct @ map.h:45:3 (flecs/private/map.h)
+        // Struct @ map.h:51:3 (flecs/private/map.h)
+        [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
+        public struct ecs_map_t
+        {
+            [FieldOffset(0)] // size = 8, padding = 0
+            public ecs_bucket_t* buckets;
+
+            [FieldOffset(8)] // size = 2, padding = 0
+            public short elem_size;
+
+            [FieldOffset(10)] // size = 1, padding = 1
+            public byte bucket_shift;
+
+            [FieldOffset(12)] // size = 4, padding = 0
+            public int bucket_count;
+
+            [FieldOffset(16)] // size = 4, padding = 4
+            public int count;
+        }
+
+        // Struct @ map.h:59:3 (flecs/private/map.h)
         [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
         public struct ecs_map_iter_t
         {
@@ -2551,6 +2591,29 @@ namespace bottlenoselabs
             public uint nanosec;
         }
 
+        // Struct @ api_types.h:40:29 (flecs/private/api_types.h)
+        [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
+        public struct ecs_sparse_t
+        {
+            [FieldOffset(0)] // size = 8, padding = 0
+            public ecs_vector_t* dense;
+
+            [FieldOffset(8)] // size = 8, padding = 0
+            public ecs_vector_t* chunks;
+
+            [FieldOffset(16)] // size = 4, padding = 0
+            public ecs_size_t size;
+
+            [FieldOffset(20)] // size = 4, padding = 0
+            public int count;
+
+            [FieldOffset(24)] // size = 8, padding = 0
+            public ulong max_id_local;
+
+            [FieldOffset(32)] // size = 8, padding = 0
+            public ulong* max_id;
+        }
+
         // Struct @ api_types.h:168:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
         public struct ecs_sparse_iter_t
@@ -2572,7 +2635,7 @@ namespace bottlenoselabs
         }
 
         // Struct @ hashmap.h:24:3 (flecs/private/hashmap.h)
-        [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
+        [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
         public struct ecs_hashmap_t
         {
             [FieldOffset(0)] // size = 8, padding = 0
@@ -2587,8 +2650,8 @@ namespace bottlenoselabs
             [FieldOffset(20)] // size = 4, padding = 0
             public ecs_size_t value_size;
 
-            [FieldOffset(24)] // size = 8, padding = 0
-            public ecs_map_t* impl;
+            [FieldOffset(24)] // size = 24, padding = 0
+            public ecs_map_t impl;
         }
 
         // Struct @ hashmap.h:36:3 (flecs/private/hashmap.h)
@@ -3470,7 +3533,7 @@ namespace bottlenoselabs
             public CBool no_staging;
         }
 
-        // Struct @ json.h:26:3 (flecs/addons/json.h)
+        // Struct @ json.h:28:3 (flecs/addons/json.h)
         [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
         public struct ecs_parse_json_desc_t
         {
@@ -3481,36 +3544,45 @@ namespace bottlenoselabs
             public CString expr;
         }
 
-        // Struct @ json.h:155:3 (flecs/addons/json.h)
-        [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 1)]
+        // Struct @ json.h:160:3 (flecs/addons/json.h)
+        [StructLayout(LayoutKind.Explicit, Size = 11, Pack = 1)]
         public struct ecs_entity_to_json_desc_t
         {
             [FieldOffset(0)] // size = 1, padding = 0
             public CBool serialize_path;
 
             [FieldOffset(1)] // size = 1, padding = 0
-            public CBool serialize_label;
+            public CBool serialize_meta_ids;
 
             [FieldOffset(2)] // size = 1, padding = 0
-            public CBool serialize_id_labels;
+            public CBool serialize_label;
 
             [FieldOffset(3)] // size = 1, padding = 0
-            public CBool serialize_base;
+            public CBool serialize_brief;
 
             [FieldOffset(4)] // size = 1, padding = 0
-            public CBool serialize_private;
+            public CBool serialize_link;
 
             [FieldOffset(5)] // size = 1, padding = 0
-            public CBool serialize_hidden;
+            public CBool serialize_id_labels;
 
             [FieldOffset(6)] // size = 1, padding = 0
-            public CBool serialize_values;
+            public CBool serialize_base;
 
             [FieldOffset(7)] // size = 1, padding = 0
+            public CBool serialize_private;
+
+            [FieldOffset(8)] // size = 1, padding = 0
+            public CBool serialize_hidden;
+
+            [FieldOffset(9)] // size = 1, padding = 0
+            public CBool serialize_values;
+
+            [FieldOffset(10)] // size = 1, padding = 0
             public CBool serialize_type_info;
         }
 
-        // Struct @ json.h:204:3 (flecs/addons/json.h)
+        // Struct @ json.h:209:3 (flecs/addons/json.h)
         [StructLayout(LayoutKind.Explicit, Size = 11, Pack = 1)]
         public struct ecs_iter_to_json_desc_t
         {
@@ -4030,6 +4102,20 @@ namespace bottlenoselabs
 
             [FieldOffset(1064)] // size = 8, padding = 0
             public ecs_http_connection_t* conn;
+        }
+
+        // Struct @ map.h:43:3 (flecs/private/map.h)
+        [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
+        public struct ecs_bucket_t
+        {
+            [FieldOffset(0)] // size = 8, padding = 0
+            public ecs_map_key_t* keys;
+
+            [FieldOffset(8)] // size = 8, padding = 0
+            public void* payload;
+
+            [FieldOffset(16)] // size = 4, padding = 4
+            public int count;
         }
 
         // Struct @ strbuf.h:40:3 (flecs/private/strbuf.h)
@@ -4704,21 +4790,9 @@ namespace bottlenoselabs
         {
         }
 
-        // OpaqueType @ map.h:36:26 (flecs/private/map.h)
-        [StructLayout(LayoutKind.Sequential)]
-        public struct ecs_map_t
-        {
-        }
-
         // OpaqueType @ flecs.h:126:28
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_world_t
-        {
-        }
-
-        // OpaqueType @ api_types.h:40:29 (flecs/private/api_types.h)
-        [StructLayout(LayoutKind.Sequential)]
-        public struct ecs_sparse_t
         {
         }
 
@@ -4761,12 +4835,6 @@ namespace bottlenoselabs
         // OpaqueType @ http.h:40:34 (flecs/addons/http.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_http_server_t
-        {
-        }
-
-        // OpaqueType @ map.h:41:12 (flecs/private/map.h)
-        [StructLayout(LayoutKind.Sequential)]
-        public struct ecs_bucket_t
         {
         }
 
@@ -4823,7 +4891,7 @@ namespace bottlenoselabs
             public static implicit operator ecs_size_t(int data) => new() { Data = data };
         }
 
-        // Typedef @ map.h:37:18 (flecs/private/map.h)
+        // Typedef @ map.h:36:18 (flecs/private/map.h)
         [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 8)]
         public struct ecs_map_key_t
         {
@@ -5296,7 +5364,7 @@ namespace bottlenoselabs
         // MacroDefinition @ flecs.h:1152:9
         public const int EcsFirstUserEntityId = ECS_HI_COMPONENT_ID + 128;
 
-        // MacroDefinition @ rest.h:147:9 (flecs/addons/rest.h)
+        // MacroDefinition @ rest.h:40:9 (flecs/addons/rest.h)
         public const int ECS_REST_DEFAULT_PORT = 27750;
 
         // MacroDefinition @ meta.h:70:9 (flecs/addons/meta.h)
