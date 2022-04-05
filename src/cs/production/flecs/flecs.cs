@@ -2668,7 +2668,7 @@ namespace bottlenoselabs
             public ulong* max_id;
         }
 
-        // Struct @ api_types.h:184:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:185:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
         public struct ecs_sparse_iter_t
         {
@@ -4349,7 +4349,7 @@ namespace bottlenoselabs
             public ecs_entity_t entity;
         }
 
-        // Struct @ api_types.h:241:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:242:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 1416, Pack = 8)]
         public struct ecs_iter_private_t
         {
@@ -4359,7 +4359,7 @@ namespace bottlenoselabs
             [FieldOffset(1168)] // size = 248, padding = 0
             public ecs_iter_cache_t cache;
 
-            // Union @ api_types.h:230:5 (flecs/private/api_types.h)
+            // Union @ api_types.h:231:5 (flecs/private/api_types.h)
             [StructLayout(LayoutKind.Explicit, Size = 1168, Pack = 8)]
             public struct ecs_iter_private_t_iter
             {
@@ -4514,7 +4514,7 @@ namespace bottlenoselabs
             public CString separator;
         }
 
-        // Struct @ api_types.h:225:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:226:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 248, Pack = 8)]
         public struct ecs_iter_cache_t
         {
@@ -4690,7 +4690,7 @@ namespace bottlenoselabs
             public void* ptr;
         }
 
-        // Struct @ api_types.h:158:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:159:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 1168, Pack = 8)]
         public struct ecs_filter_iter_t
         {
@@ -4703,11 +4703,14 @@ namespace bottlenoselabs
             [FieldOffset(856)] // size = 304, padding = 0
             public ecs_term_iter_t term_iter;
 
-            [FieldOffset(1160)] // size = 4, padding = 4
+            [FieldOffset(1160)] // size = 4, padding = 0
             public int matches_left;
+
+            [FieldOffset(1164)] // size = 4, padding = 0
+            public int pivot_term;
         }
 
-        // Struct @ api_types.h:168:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:169:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
         public struct ecs_query_iter_t
         {
@@ -4733,7 +4736,7 @@ namespace bottlenoselabs
             public int skip_count;
         }
 
-        // Struct @ api_types.h:199:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:200:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 8)]
         public struct ecs_rule_iter_t
         {
@@ -4762,7 +4765,7 @@ namespace bottlenoselabs
             public int sp;
         }
 
-        // Struct @ api_types.h:175:3 (flecs/private/api_types.h)
+        // Struct @ api_types.h:176:3 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Explicit, Size = 864, Pack = 8)]
         public struct ecs_snapshot_iter_t
         {
@@ -5047,7 +5050,7 @@ namespace bottlenoselabs
         {
         }
 
-        // OpaqueType @ api_types.h:190:12 (flecs/private/api_types.h)
+        // OpaqueType @ api_types.h:191:12 (flecs/private/api_types.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct ecs_rule_op_ctx_t
         {
@@ -5427,7 +5430,7 @@ namespace bottlenoselabs
         // MacroDefinition @ flecs.h:386:9
         public const int EcsNothing = 64;
 
-        // MacroDefinition @ api_types.h:211:9 (flecs/private/api_types.h)
+        // MacroDefinition @ api_types.h:212:9 (flecs/private/api_types.h)
         public const int flecs_iter_cache_all = 255;
 
         // MacroDefinition @ api_support.h:24:9 (flecs/private/api_support.h)
