@@ -1652,151 +1652,151 @@ namespace bottlenoselabs
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FlecsUnitsImport(ecs_world_t* world);
 
-        // Function @ meta.h:358:19 (flecs/addons/meta.h)
+        // Function @ meta.h:359:19 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_meta_cursor_t ecs_meta_cursor(ecs_world_t* world, ecs_entity_t type, void* ptr);
 
-        // Function @ meta.h:365:7 (flecs/addons/meta.h)
+        // Function @ meta.h:366:7 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void* ecs_meta_get_ptr(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:370:5 (flecs/addons/meta.h)
+        // Function @ meta.h:371:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_next(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:375:5 (flecs/addons/meta.h)
+        // Function @ meta.h:376:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_move(ecs_meta_cursor_t* cursor, int pos);
 
-        // Function @ meta.h:381:5 (flecs/addons/meta.h)
+        // Function @ meta.h:382:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_member(ecs_meta_cursor_t* cursor, CString name);
 
-        // Function @ meta.h:387:5 (flecs/addons/meta.h)
+        // Function @ meta.h:388:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_push(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:392:5 (flecs/addons/meta.h)
+        // Function @ meta.h:393:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_pop(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:397:6 (flecs/addons/meta.h)
+        // Function @ meta.h:398:6 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_meta_is_collection(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:402:14 (flecs/addons/meta.h)
+        // Function @ meta.h:403:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_meta_get_type(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:407:14 (flecs/addons/meta.h)
+        // Function @ meta.h:408:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_meta_get_unit(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:412:13 (flecs/addons/meta.h)
+        // Function @ meta.h:413:13 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_meta_get_member(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:421:5 (flecs/addons/meta.h)
+        // Function @ meta.h:422:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_bool(ecs_meta_cursor_t* cursor, CBool value);
 
-        // Function @ meta.h:427:5 (flecs/addons/meta.h)
+        // Function @ meta.h:428:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_char(ecs_meta_cursor_t* cursor, CChar value);
 
-        // Function @ meta.h:433:5 (flecs/addons/meta.h)
+        // Function @ meta.h:434:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_int(ecs_meta_cursor_t* cursor, long value);
 
-        // Function @ meta.h:439:5 (flecs/addons/meta.h)
+        // Function @ meta.h:440:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_uint(ecs_meta_cursor_t* cursor, ulong value);
 
-        // Function @ meta.h:445:5 (flecs/addons/meta.h)
+        // Function @ meta.h:446:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_float(ecs_meta_cursor_t* cursor, double value);
 
-        // Function @ meta.h:451:5 (flecs/addons/meta.h)
+        // Function @ meta.h:452:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_string(ecs_meta_cursor_t* cursor, CString value);
 
-        // Function @ meta.h:457:5 (flecs/addons/meta.h)
+        // Function @ meta.h:458:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_string_literal(ecs_meta_cursor_t* cursor, CString value);
 
-        // Function @ meta.h:463:5 (flecs/addons/meta.h)
+        // Function @ meta.h:464:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_entity(ecs_meta_cursor_t* cursor, ecs_entity_t value);
 
-        // Function @ meta.h:469:5 (flecs/addons/meta.h)
+        // Function @ meta.h:470:5 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ecs_meta_set_null(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:477:6 (flecs/addons/meta.h)
+        // Function @ meta.h:478:6 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CBool ecs_meta_get_bool(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:482:6 (flecs/addons/meta.h)
+        // Function @ meta.h:483:6 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CChar ecs_meta_get_char(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:487:9 (flecs/addons/meta.h)
+        // Function @ meta.h:488:9 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern long ecs_meta_get_int(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:492:10 (flecs/addons/meta.h)
+        // Function @ meta.h:493:10 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ulong ecs_meta_get_uint(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:497:8 (flecs/addons/meta.h)
+        // Function @ meta.h:498:8 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern double ecs_meta_get_float(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:505:13 (flecs/addons/meta.h)
+        // Function @ meta.h:506:13 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern CString ecs_meta_get_string(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:511:14 (flecs/addons/meta.h)
+        // Function @ meta.h:512:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_meta_get_entity(ecs_meta_cursor_t* cursor);
 
-        // Function @ meta.h:525:14 (flecs/addons/meta.h)
+        // Function @ meta.h:526:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_primitive_init(ecs_world_t* world, ecs_primitive_desc_t* desc);
 
-        // Function @ meta.h:537:14 (flecs/addons/meta.h)
+        // Function @ meta.h:538:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_enum_init(ecs_world_t* world, ecs_enum_desc_t* desc);
 
-        // Function @ meta.h:550:14 (flecs/addons/meta.h)
+        // Function @ meta.h:551:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_bitmask_init(ecs_world_t* world, ecs_bitmask_desc_t* desc);
 
-        // Function @ meta.h:564:14 (flecs/addons/meta.h)
+        // Function @ meta.h:565:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_array_init(ecs_world_t* world, ecs_array_desc_t* desc);
 
-        // Function @ meta.h:577:14 (flecs/addons/meta.h)
+        // Function @ meta.h:578:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_vector_init(ecs_world_t* world, ecs_vector_desc_t* desc);
 
-        // Function @ meta.h:590:14 (flecs/addons/meta.h)
+        // Function @ meta.h:591:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_struct_init(ecs_world_t* world, ecs_struct_desc_t* desc);
 
-        // Function @ meta.h:624:14 (flecs/addons/meta.h)
+        // Function @ meta.h:625:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_unit_init(ecs_world_t* world, ecs_unit_desc_t* desc);
 
-        // Function @ meta.h:641:14 (flecs/addons/meta.h)
+        // Function @ meta.h:642:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_unit_prefix_init(ecs_world_t* world, ecs_unit_prefix_desc_t* desc);
 
-        // Function @ meta.h:647:14 (flecs/addons/meta.h)
+        // Function @ meta.h:648:14 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ecs_entity_t ecs_quantity_init(ecs_world_t* world, ecs_entity_desc_t* desc);
 
-        // Function @ meta.h:653:6 (flecs/addons/meta.h)
+        // Function @ meta.h:654:6 (flecs/addons/meta.h)
         [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FlecsMetaImport(ecs_world_t* world);
 
@@ -2381,7 +2381,7 @@ namespace bottlenoselabs
             public delegate* unmanaged<ecs_world_t*, ecs_entity_t, ecs_system_status_t, void*, void> Pointer;
         }
 
-        // FunctionPointer @ meta.h:353:20 (flecs/addons/meta.h)
+        // FunctionPointer @ meta.h:354:20 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Sequential)]
         public struct FnPtr_Ecs_world_tPtr_CString_VoidPtr_Ecs_entity_t
         {
@@ -3757,7 +3757,7 @@ namespace bottlenoselabs
             public CBool serialize_type_info;
         }
 
-        // Struct @ meta.h:355:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:356:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 2080, Pack = 8)]
         public struct ecs_meta_cursor_t
         {
@@ -3796,7 +3796,7 @@ namespace bottlenoselabs
             public void* lookup_ctx;
         }
 
-        // Struct @ meta.h:521:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:522:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 328, Pack = 8)]
         public struct ecs_primitive_desc_t
         {
@@ -3807,7 +3807,7 @@ namespace bottlenoselabs
             public ecs_primitive_kind_t kind;
         }
 
-        // Struct @ meta.h:533:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:534:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 1088, Pack = 8)]
         public struct ecs_enum_desc_t
         {
@@ -3831,7 +3831,7 @@ namespace bottlenoselabs
             }
         }
 
-        // Struct @ meta.h:546:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:547:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 1088, Pack = 8)]
         public struct ecs_bitmask_desc_t
         {
@@ -3855,7 +3855,7 @@ namespace bottlenoselabs
             }
         }
 
-        // Struct @ meta.h:560:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:561:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 336, Pack = 8)]
         public struct ecs_array_desc_t
         {
@@ -3869,7 +3869,7 @@ namespace bottlenoselabs
             public int count;
         }
 
-        // Struct @ meta.h:573:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:574:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 328, Pack = 8)]
         public struct ecs_vector_desc_t
         {
@@ -3880,7 +3880,7 @@ namespace bottlenoselabs
             public ecs_entity_t type;
         }
 
-        // Struct @ meta.h:586:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:587:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 1856, Pack = 8)]
         public struct ecs_struct_desc_t
         {
@@ -3904,7 +3904,7 @@ namespace bottlenoselabs
             }
         }
 
-        // Struct @ meta.h:620:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:621:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 368, Pack = 8)]
         public struct ecs_unit_desc_t
         {
@@ -3930,7 +3930,7 @@ namespace bottlenoselabs
             public ecs_entity_t prefix;
         }
 
-        // Struct @ meta.h:637:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:638:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 336, Pack = 8)]
         public struct ecs_unit_prefix_desc_t
         {
@@ -4425,7 +4425,7 @@ namespace bottlenoselabs
             public ecs_iter_init_action_t init;
         }
 
-        // Struct @ meta.h:259:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:260:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 4)]
         public struct ecs_unit_translation_t
         {
@@ -4804,7 +4804,7 @@ namespace bottlenoselabs
             public int count;
         }
 
-        // Struct @ meta.h:342:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:343:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 64, Pack = 8)]
         public struct ecs_meta_scope_t
         {
@@ -4839,7 +4839,7 @@ namespace bottlenoselabs
             public CBool is_inline_array;
         }
 
-        // Struct @ meta.h:214:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:215:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
         public struct ecs_enum_constant_t
         {
@@ -4853,7 +4853,7 @@ namespace bottlenoselabs
             public ecs_entity_t constant;
         }
 
-        // Struct @ meta.h:230:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:231:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
         public struct ecs_bitmask_constant_t
         {
@@ -4867,7 +4867,7 @@ namespace bottlenoselabs
             public ecs_entity_t constant;
         }
 
-        // Struct @ meta.h:198:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:199:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 48, Pack = 8)]
         public struct ecs_member_t
         {
@@ -4935,7 +4935,7 @@ namespace bottlenoselabs
             public ecs_table_cache_hdr_t* next;
         }
 
-        // Struct @ meta.h:319:3 (flecs/addons/meta.h)
+        // Struct @ meta.h:320:3 (flecs/addons/meta.h)
         [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 8)]
         public struct ecs_meta_type_op_t
         {
@@ -5289,7 +5289,7 @@ namespace bottlenoselabs
             EcsIterEvalNone = 3
         }
 
-        // Enum @ meta.h:307:3 (flecs/addons/meta.h)
+        // Enum @ meta.h:308:3 (flecs/addons/meta.h)
         public enum ecs_meta_type_op_kind_t : int
         {
             EcsOpArray = 0,
@@ -5586,7 +5586,7 @@ namespace bottlenoselabs
         // MacroDefinition @ meta.h:70:9 (flecs/addons/meta.h)
         public const int ECS_MEMBER_DESC_CACHE_SIZE = 32;
 
-        // MacroDefinition @ meta.h:328:9 (flecs/addons/meta.h)
+        // MacroDefinition @ meta.h:329:9 (flecs/addons/meta.h)
         public const int ECS_META_MAX_SCOPE_DEPTH = 32;
 
         // MacroDefinition @ stats.h:18:9 (flecs/addons/stats.h)
