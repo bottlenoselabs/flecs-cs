@@ -106,6 +106,9 @@ jobs:
           message: "Update bindings"
   
   build-job:
+    runs-on: ubuntu-latest
+    
+    steps:
     - name: "Build .NET"
       needs: [bindgen-ast-job, bindgen-cs-job]
       uses: "bottlenoselabs/flecs-cs/.github/workflows/build.yml@main"
