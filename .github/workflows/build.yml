@@ -74,6 +74,12 @@ jobs:
           name: "native-libraries-linux-x64"
           path: "./lib"
 
+      - name: "Download generated C# code"
+        uses: actions/download-artifact@v1
+        with:
+          name: "bindgen-cs"
+          path: "./"
+
       - name: ".NET Build"
         run: dotnet build
           

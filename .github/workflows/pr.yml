@@ -13,12 +13,11 @@ jobs:
     uses: "./.github/workflows/bindgen.yml"
 
   commit-job:
-    name: "Commit"
+    name: "Build"
     needs: [bindgen-job]
-    uses: "./.github/workflows/commit.yml"
+    uses: "/.github/workflows/commit.yml"
 
   build-job:
     name: "Build"
-    needs: [bindgen-job, commit-job]
-    if: always()
-    uses: "./.github/workflows/build.yml"
+    needs: [bindgen-job]
+    uses: "/.github/workflows/build.yml"

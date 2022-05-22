@@ -2,6 +2,9 @@ name: "Commit generated C# code"
 
 on:
   workflow_run:
+    workflows: ["Bindgen"]
+      types:
+        - completed
 
 jobs:
 
