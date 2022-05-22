@@ -51,6 +51,7 @@ jobs:
   bindgen-cs-job:
     name: "Bindgen C#"
     if: github.actor == 'dependabot[bot]' #DO NOT REMOVE THIS LINE: https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
+    needs: [bindgen-ast-job]
     runs-on: ubuntu-latest
 
     steps:
