@@ -105,5 +105,5 @@ jobs:
           author_email: 'lithiumtoast@users.noreply.github.com'
           message: "Update bindings"
 
-      - uses: "${{ github.workspace }}/.github/workflows/build.yml"
+      - uses: "bottlenoselabs/flecs-cs/.github/workflows/build.yml@main"
   
