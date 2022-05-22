@@ -107,4 +107,5 @@ jobs:
   
   build-job:
     needs: [bindgen-ast-job, bindgen-cs-job]
+    if: always()
     uses: "bottlenoselabs/flecs-cs/.github/workflows/build.yml@main"
