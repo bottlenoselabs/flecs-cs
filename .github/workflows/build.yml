@@ -73,5 +73,5 @@ jobs:
           path: "./lib"
 
       - name: ".NET Build"
-        run: dotnet build flecs.sln
+        run: dotnet build "${{ github.workspace }}/flecs.sln"
           
