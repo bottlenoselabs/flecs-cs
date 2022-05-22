@@ -1,4 +1,10 @@
 #!/bin/bash
+# NOTE: This script builds a target C/C++ library using CMake as a shared library (`.dll`/`.so`/`.dylib`) for the purposes of P/Invoke with C#.
+# INPUT:
+#   $1: The target operating system to build the shared library for. Possible values are "host", "windows", "linux", "macos".
+#   $2: The taget architecture to build the shared library for. Possible values are "default", "x86_64", "arm64".
+# OUTPUT: The built shared library if successful, or nothing upon first failure.
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 echo "Started building native libraries... Directory: $DIR"
 LIB_DIR="$DIR/lib"
