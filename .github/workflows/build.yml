@@ -24,18 +24,18 @@ jobs:
           - { name: Linux (x64), os: ubuntu-latest, rid: linux-x64 }
     steps:
 
+      - name: "Clone Git repository"
+        if: steps.cache-libs.outputs.cache-hit != 'true'
+        uses: actions/checkout@master
+        with:
+          submodules: "recursive"
+
       - name: "Cache native libraries"
         id: cache-libs
         uses: actions/cache@v3
         with:
           path: "./lib"
           key: "libs-${{ matrix.platform.rid }}-${{ hashFiles('ext/flecs/**/*') }}"
-
-      - name: "Clone Git repository"
-        if: steps.cache-libs.outputs.cache-hit != 'true'
-        uses: actions/checkout@master
-        with:
-          submodules: "recursive"
 
       - name: "Build native libraries"
         if: steps.cache-libs.outputs.cache-hit != 'true'
@@ -73,5 +73,5 @@ jobs:
           path: "./lib"
 
       - name: ".NET Build"
-        run: dotnet build
+        run: dotnet build flecs.sln
           
