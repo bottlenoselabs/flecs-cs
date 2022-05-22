@@ -12,12 +12,7 @@ jobs:
     name: "Bindgen"
     uses: "./.github/workflows/bindgen.yml"
 
-  commit-job:
-    name: "Build"
-    needs: [bindgen-job]
-    uses: "/.github/workflows/commit.yml"
-
   build-job:
     name: "Build"
     needs: [bindgen-job]
-    uses: "/.github/workflows/build.yml"
+    uses: "./.github/workflows/build.yml"
