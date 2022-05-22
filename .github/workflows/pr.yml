@@ -104,6 +104,8 @@ jobs:
           author_name: 'lithiumtoast'
           author_email: 'lithiumtoast@users.noreply.github.com'
           message: "Update bindings"
-
-      - uses: "bottlenoselabs/flecs-cs/.github/workflows/build.yml@main"
   
+  build-job:
+    - name: "Build .NET"
+      needs: [bindgen-ast-job, bindgen-cs-job]
+      uses: "bottlenoselabs/flecs-cs/.github/workflows/build.yml@main"
