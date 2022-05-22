@@ -32,9 +32,9 @@ jobs:
         shell: bash
         run: dotnet tool install --global bottlenoselabs.C2CS
 
-      - name: "Read C code: Linux dependencies"
-        if: runner.os == 'Linux'
-        run: sudo apt-get install libc6-dev-i386
+      # - name: "Read C code: Linux dependencies"
+      #   if: runner.os == 'Linux'
+      #   run: sudo apt-get install libc6-dev-i386
 
       - name: "Read C code"
         shell: bash
