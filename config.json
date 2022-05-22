@@ -1,10 +1,15 @@
 {
-    "inputFilePath": "ext/flecs/include/flecs.h",
-    "outputFilePath": "./src/cs/production/flecs/flecs.cs",
-    "namespaceName": "bottlenoselabs",
-    "machineBitWidth": 64,
-    "ignoredTypeNames": [
+  "directory": "./ast",
+  "c": {
+    "input_file": "./ext/flecs/include/flecs.h"
+  },
+  "cs": {
+    "output_file": "./src/cs/production/flecs/flecs.cs",
+    "namespace": "bottlenoselabs",
+    "library_name": "flecs",
+    "ignored_names": [
       "FLECS_FLOAT",
       "ECS_FUNC_NAME_BACK"
     ]
   }
+}
