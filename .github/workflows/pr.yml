@@ -6,17 +6,19 @@ on:
     paths-ignore:
       - '**.md'
 
+jobs:
+
   bindgen-job:
     name: "Bindgen"
-    uses: "/.github/workflows/bindgen.yml"
+    uses: "./.github/workflows/bindgen.yml"
 
   commit-job:
-    name: "Build"
+    name: "Commit"
     needs: [bindgen-job]
-    uses: "/.github/workflows/commit.yml"
+    uses: "./.github/workflows/commit.yml"
 
   build-job:
     name: "Build"
     needs: [bindgen-job, commit-job]
     if: always()
-    uses: "/.github/workflows/build.yml"
+    uses: "./.github/workflows/build.yml"
