@@ -51,6 +51,7 @@ jobs:
     needs: [bindgen-ast-job]
     runs-on: ubuntu-latest
 
+    steps:
       - name: "Download C code abstrast syntax trees (win)"
         uses: actions/download-artifact@v1
         with:
