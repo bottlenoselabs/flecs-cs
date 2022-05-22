@@ -1,111 +1,22 @@
-name: "pr"
+name: "Pull Request"
 
 on:
-  pull_request_target:
+  pull_request:
     types: [assigned, opened, synchronize, reopened]
     paths-ignore:
       - '**.md'
 
-jobs:
+  bindgen-job:
+    name: "Bindgen"
+    uses: "/.github/workflows/bindgen.yml"
 
-  bindgen-ast-job:
-    name: "Bindgen AST"
-    if: github.actor == 'dependabot[bot]' #DO NOT REMOVE THIS LINE: https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
-    runs-on: ${{ matrix.platform.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        platform:
-          - { name: Windows, os: windows-latest, rid: win }
-          - { name: macOS, os: macos-latest, rid: osx }
-          - { name: Linux, os: ubuntu-latest, rid: linux }
+  commit-job:
+    name: "Build"
+    needs: [bindgen-job]
+    uses: "/.github/workflows/commit.yml"
 
-    steps:
-      - name: "Clone Git repository"
-        uses: actions/checkout@v2
-        with:
-          submodules: 'true'
-          ref: ${{ github.event.pull_request.head.sha }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: "Install .NET"
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '6.0.x'
-          include-prerelease: true
-
-      - name: "Install C2CS"
-        shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS
-
-      - name: "Read C code: Linux dependencies"
-        if: runner.os == 'Linux'
-        run: sudo apt-get install libc6-dev-i386
-
-      - name: "Read C code"
-        shell: bash
-        run: c2cs c --configurationFilePath "./bindgen_ast_${{ matrix.platform.rid }}.json"
-
-      - name: "Upload C code abstract syntax trees"
-        uses: actions/upload-artifact@v2
-        with:
-          name: "ast-${{ matrix.platform.rid }}"
-          path: "./ast"
-
-  bindgen-cs-job:
-    name: "Bindgen C#"
-    if: github.actor == 'dependabot[bot]' #DO NOT REMOVE THIS LINE: https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
-    needs: [bindgen-ast-job]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: "Clone Git repository"
-        uses: actions/checkout@v2
-        with:
-          submodules: 'false'
-          ref: ${{ github.event.pull_request.head.sha }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: "Download C code abstrast syntax trees (win)"
-        uses: actions/download-artifact@v1
-        with:
-          name: "ast-win"
-          path: "./ast"
-
-      - name: "Download C code abstrast syntax trees (osx)"
-        uses: actions/download-artifact@v1
-        with:
-          name: "ast-osx"
-          path: "./ast"
-
-      - name: "Download C code abstrast syntax trees (linux)"
-        uses: actions/download-artifact@v1
-        with:
-          name: "ast-linux"
-          path: "./ast"
-
-      - name: "Install .NET"
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '6.0.x'
-          include-prerelease: true
-
-      - name: "Install C2CS"
-        shell: bash
-        run: dotnet tool install --global bottlenoselabs.C2CS
-
-      - name: "Generate C# code"
-        shell: bash
-        run: c2cs cs --configurationFilePath "./bindgen_cs.json"
-
-      - name: "Add + commit + push (if necessary)"
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: 'lithiumtoast'
-          author_email: 'lithiumtoast@users.noreply.github.com'
-          message: "Update bindings"
-  
   build-job:
-    needs: [bindgen-ast-job, bindgen-cs-job]
+    name: "Build"
+    needs: [bindgen-job, commit-job]
     if: always()
-    uses: "bottlenoselabs/flecs-cs/.github/workflows/build.yml@main"
+    uses: "/.github/workflows/build.yml"
