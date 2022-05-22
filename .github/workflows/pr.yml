@@ -40,7 +40,7 @@ jobs:
 
       - name: "Read C code"
         shell: bash
-        run: c2cs -c ./ast_${{ matrix.platform.rid }}.json
+        run: c2cs -c ./bindgen_ast_${{ matrix.platform.rid }}.json
 
       - name: "Upload C code abstract syntax trees"
         uses: actions/upload-artifact@v2
