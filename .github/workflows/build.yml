@@ -24,20 +24,29 @@ jobs:
           - { name: Linux (x64), os: ubuntu-latest, rid: linux-x64 }
     steps:
 
+      - name: "Cache native libraries"
+        id: cache-libs
+        uses: actions/cache@v3
+        with:
+          path: "./lib"
+          key: "libs-${{ matrix.platform.rid }}-${{ hashFiles('ext/flecs/**/*') }}"
+
       - name: "Clone Git repository"
+        if: steps.cache-libs.outputs.cache-hit != 'true'
         uses: actions/checkout@master
         with:
           submodules: "recursive"
 
       - name: "Build native libraries"
+        if: steps.cache-libs.outputs.cache-hit != 'true'
         shell: bash
         run: ./library.sh
 
       - name: "Upload native libraries"
         uses: actions/upload-artifact@v2
         with:
-          name: "native-libraries-${{ matrix.platform.rid }}"
           path: "./lib"
+          name: "native-libraries-${{ matrix.platform.rid }}"
 
   dotnet-job:
     name: "Build .NET solution"
