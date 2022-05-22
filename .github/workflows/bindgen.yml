@@ -52,6 +52,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: "Clone Git repository"
+        uses: actions/checkout@v2
+        with:
+          submodules: 'false'
+
       - name: "Download C code abstrast syntax trees (win)"
         uses: actions/download-artifact@v1
         with:

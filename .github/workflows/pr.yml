@@ -9,10 +9,8 @@ on:
 jobs:
 
   bindgen-job:
-    name: "Bindgen"
     uses: "./.github/workflows/bindgen.yml"
 
   build-job:
-    name: "Build"
     needs: [bindgen-job]
     uses: "./.github/workflows/build.yml"
