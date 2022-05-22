@@ -7,10 +7,18 @@ on:
       - '**.md'
 
 jobs:
-  bindgen-job:
-    if: github.actor == 'dependabot[bot]'
-    name: "bindgen"
-    runs-on: ubuntu-latest
+
+  bindgen-ast-job:
+    name: "Bindgen AST"
+    if: github.actor == 'dependabot[bot]' #DO NOT REMOVE THIS LINE: https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
+    runs-on: ${{ matrix.platform.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - { name: Windows, os: windows-latest, rid: win }
+          - { name: macOS, os: macos-latest, rid: osx }
+          - { name: Linux, os: ubuntu-latest, rid: linux }
 
     steps:
       - name: "Clone Git repository"
@@ -28,11 +36,62 @@ jobs:
 
       - name: "Install C2CS"
         shell: bash
-        run: dotnet tool install bottlenoselabs.C2CS --global --add-source https://www.myget.org/F/bottlenoselabs/api/v3/index.json --version "*-*"
+        run: dotnet tool install --global bottlenoselabs.C2CS
 
-      - name: "bindgen"
+      - name: "Read C code"
         shell: bash
-        run: c2cs
+        run: c2cs -c ./ast_${{ matrix.platform.rid }}.json
+
+      - name: "Upload C code abstract syntax trees"
+        uses: actions/upload-artifact@v2
+        with:
+          name: "ast-${{ matrix.platform.rid }}"
+          path: "./ast"
+
+  bindgen-cs-job:
+    name: "Bindgen C#"
+    if: github.actor == 'dependabot[bot]' #DO NOT REMOVE THIS LINE: https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Clone Git repository"
+        uses: actions/checkout@v2
+        with:
+          submodules: 'false'
+          ref: ${{ github.event.pull_request.head.sha }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Download C code abstrast syntax trees (win)"
+        uses: actions/download-artifact@v1
+        with:
+          name: "ast-win"
+          path: "./ast"
+
+      - name: "Download C code abstrast syntax trees (osx)"
+        uses: actions/download-artifact@v1
+        with:
+          name: "ast-osx"
+          path: "./ast"
+
+      - name: "Download C code abstrast syntax trees (linux)"
+        uses: actions/download-artifact@v1
+        with:
+          name: "ast-linux"
+          path: "./ast"
+
+      - name: "Install .NET"
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+          include-prerelease: true
+
+      - name: "Install C2CS"
+        shell: bash
+        run: dotnet tool install --global bottlenoselabs.C2CS
+
+      - name: "Generate C# code"
+        shell: bash
+        run: c2cs -c ./bindgen_cs.json
 
       - name: "Add + commit + push (if necessary)"
         uses: EndBug/add-and-commit@v7
@@ -40,4 +99,6 @@ jobs:
           author_name: 'lithiumtoast'
           author_email: 'lithiumtoast@users.noreply.github.com'
           message: "Update bindings"
+
+      - uses: ./.github/workflows/build.yml
   

@@ -1,6 +1,7 @@
 name: "build+deploy"
 
 on:
+  workflow_call:
   push:
     tags:
       - v*
@@ -12,7 +13,7 @@ on:
 jobs:
 
   native-job:
-    name: "Native libraries: ${{ matrix.platform.rid }}"
+    name: "Build native libraries: ${{ matrix.platform.rid }}"
     runs-on: ${{ matrix.platform.os }}
     strategy:
       fail-fast: false
@@ -39,7 +40,7 @@ jobs:
           path: "./lib"
 
   dotnet-job:
-    name: ".NET"
+    name: "Build .NET solution"
     needs: [native-job]
     runs-on: ubuntu-latest
     steps:
@@ -62,8 +63,6 @@ jobs:
           name: "native-libraries-linux-x64"
           path: "./lib"
 
-      - uses: bottlenoselabs/github-actions-dotnet@v2
-        with:
-          repository: '${{ github.repository }}'
-          dotnet-sdk-version: '6.0.x'
+      - name: ".NET Build"
+        run: dotnet build
           
