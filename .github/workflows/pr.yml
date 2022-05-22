@@ -44,7 +44,7 @@ jobs:
 
       - name: "Read C code"
         shell: bash
-        run: c2cs -c ./bindgen_ast_${{ matrix.platform.rid }}.json
+        run: c2cs c --configurationFilePath "./bindgen_ast_${{ matrix.platform.rid }}.json"
 
       - name: "Upload C code abstract syntax trees"
         uses: actions/upload-artifact@v2
@@ -96,7 +96,7 @@ jobs:
 
       - name: "Generate C# code"
         shell: bash
-        run: c2cs -c ./bindgen_cs.json
+        run: c2cs cs --configurationFilePath "./bindgen_cs.json"
 
       - name: "Add + commit + push (if necessary)"
         uses: EndBug/add-and-commit@v7
@@ -105,5 +105,5 @@ jobs:
           author_email: 'lithiumtoast@users.noreply.github.com'
           message: "Update bindings"
 
-      - uses: ./.github/workflows/build.yml
+      - uses: "./.github/workflows/build.yml"
   
