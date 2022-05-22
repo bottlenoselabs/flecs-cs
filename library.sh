@@ -90,47 +90,47 @@ function exit_if_last_command_failed() {
     fi
 }
 
-function build_flecs() {
-    echo "Building flecs..."
-    FLECS_BUILD_DIR="$DIR/cmake-build-release-flecs"
-    rm -rf FLECS_BUILD_DIR
+function build_library() {
+    echo "Building native library..."
+    BUILD_DIR="$DIR/cmake-build-release"
+    rm -rf BUILD_DIR
 
-    cmake -S $DIR/ext/flecs -B $FLECS_BUILD_DIR $CMAKE_ARCH_ARGS \
+    cmake -S $DIR/ext/flecs -B $BUILD_DIR $CMAKE_ARCH_ARGS \
         `# change output directories` \
-        -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$FLECS_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$FLECS_BUILD_DIR \
+        -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$BUILD_DIR \
         `# project specific` \
         -DFLECS_STATIC_LIBS=OFF
     exit_if_last_command_failed
-    cmake --build $FLECS_BUILD_DIR --config Release
+    cmake --build $BUILD_DIR --config Release
     exit_if_last_command_failed
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
-        FLECS_LIBRARY_FILENAME="libflecs.so"
-        FLECS_LIBRARY_FILE_PATH_BUILD="$(readlink -f $FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME)"
+        LIBRARY_FILENAME="libflecs.so"
+        LIBRARY_FILE_PATH_BUILD="$(readlink -f $BUILD_DIR/$LIBRARY_FILENAME)"
     elif [[ "$TARGET_BUILD_OS" == "macos" ]]; then
-        FLECS_LIBRARY_FILENAME="libflecs.dylib"
-        FLECS_LIBRARY_FILE_PATH_BUILD="$(perl -MCwd -e 'print Cwd::abs_path shift' $FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME)"
+        LIBRARY_FILENAME="libflecs.dylib"
+        LIBRARY_FILE_PATH_BUILD="$(perl -MCwd -e 'print Cwd::abs_path shift' $BUILD_DIR/$LIBRARY_FILENAME)"
     elif [[ "$TARGET_BUILD_OS" == "windows" ]]; then
-        FLECS_LIBRARY_FILENAME="flecs.dll"
-        FLECS_LIBRARY_FILE_PATH_BUILD="$FLECS_BUILD_DIR/$FLECS_LIBRARY_FILENAME"
+        LIBRARY_FILENAME="flecs.dll"
+        LIBRARY_FILE_PATH_BUILD="$BUILD_DIR/$LIBRARY_FILENAME"
     fi
-    FLECS_LIBRARY_FILE_PATH="$LIB_DIR/$FLECS_LIBRARY_FILENAME"
+    LIBRARY_FILE_PATH="$LIB_DIR/$LIBRARY_FILENAME"
 
-    if [[ ! -f "$FLECS_LIBRARY_FILE_PATH_BUILD" ]]; then
-        echo "The file '$FLECS_LIBRARY_FILE_PATH_BUILD' does not exist!"
+    if [[ ! -f "$LIBRARY_FILE_PATH_BUILD" ]]; then
+        echo "The file '$LIBRARY_FILE_PATH_BUILD' does not exist!"
         exit 1
     fi
 
-    mv "$FLECS_LIBRARY_FILE_PATH_BUILD" "$FLECS_LIBRARY_FILE_PATH"
+    mv "$LIBRARY_FILE_PATH_BUILD" "$LIBRARY_FILE_PATH"
     exit_if_last_command_failed
-    echo "Copied '$FLECS_LIBRARY_FILE_PATH_BUILD' to '$FLECS_LIBRARY_FILE_PATH'"
+    echo "Copied '$LIBRARY_FILE_PATH_BUILD' to '$LIBRARY_FILE_PATH'"
 
-    rm -r $FLECS_BUILD_DIR
+    rm -r $BUILD_DIR
     exit_if_last_command_failed
-    echo "Building flecs finished!"
+    echo "Building native library finished!"
 }
 
-build_flecs
+build_library
 ls -d "$LIB_DIR"/*
 
 echo "Finished '$0'!"
