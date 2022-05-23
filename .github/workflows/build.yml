@@ -81,5 +81,6 @@ jobs:
           path: "./"
 
       - name: ".NET Build"
+        if: always()
         run: dotnet build
           
