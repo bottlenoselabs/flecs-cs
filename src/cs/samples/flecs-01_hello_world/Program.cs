@@ -12,7 +12,7 @@ internal static unsafe class Program
     {
         /* Create the world, pass arguments for overriding the number of threads,fps
          * or for starting the admin dashboard (see flecs.h for details). */
-        var world = ecs_init_w_args(args)
+        var world = ecs_init_w_args(args);
 
         /* Register a component with the world. */
         var component = ecs_component_init<Components.Position>(world);
