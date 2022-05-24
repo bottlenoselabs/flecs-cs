@@ -1,16 +1,12 @@
 name: "Commit generated C# code"
 
 on:
-  workflow_run:
-    workflows: ["Bindgen"]
-    types:
-      - completed
+  workflow_call:
 
 jobs:
 
   commit-job:
     name: "Commit generated C# code"
-    if: github.actor == 'dependabot[bot]' #DO NOT REMOVE THIS LINE: https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
     runs-on: ubuntu-latest
 
     steps:
@@ -30,4 +26,4 @@ jobs:
         with:
           author_name: 'lithiumtoast'
           author_email: 'lithiumtoast@users.noreply.github.com'
-          message: "Update bindings"
+          message: "Update C# bindings"
