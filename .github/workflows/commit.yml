@@ -3,7 +3,7 @@ name: "Commit generated C# code"
 on:
   workflow_call:
 
-permissions: write
+permissions: write-all
 
 jobs:
 
