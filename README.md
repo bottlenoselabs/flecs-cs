@@ -15,11 +15,7 @@ Automatically updated C# bindings for https://github.com/SanderMertens/flecs wit
 <Import Project="$([System.IO.Path]::GetFullPath('path/to/flecs.props'))" />
 ```
 
-#### Bindgen
-
-If you wish to re-generate the bindings, run [`c2cs`](https://github.com/lithiumtoast/c2cs) from this directory.
-
-## Developers: Documentation
+## Documentation
 
 For more information on how C# bindings work, see [`C2CS`](https://github.com/lithiumtoast/c2cs), the tool that generates the bindings for `flecs` and other C libraries.
 
